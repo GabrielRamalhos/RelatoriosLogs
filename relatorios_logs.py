@@ -14,18 +14,15 @@ HEADERS = {
 TEMPLATE_PATH = "templates/RelatorioLogs.html"
 SAIDA_PATH = "relatorios/RelatorioLogs_atualizado.html"
 
-
 def carregar_html():
     with open(TEMPLATE_PATH, "r", encoding="utf-8") as f:
         return BeautifulSoup(f, "html.parser")
-
 
 def salvar_html(soup):
     os.makedirs(os.path.dirname(SAIDA_PATH), exist_ok=True)
     with open(SAIDA_PATH, "w", encoding="utf-8") as f:
         f.write(str(soup.prettify()))
     print(f"✅ Relatório salvo em: {SAIDA_PATH}")
-
 
 def obter_dados_api():
     print("🌐 Consultando API...")
@@ -51,7 +48,6 @@ def obter_dados_api():
     print(f"✅ {len(data['content'])} tipos de eventos carregados.")
     return data["content"]
 
-
 def extrair_nome_metodo(nome_completo):
     """Extrai apenas o nome do método entre < > ou retorna o nome original."""
     match = re.search(r"<([^>]+)>", nome_completo)
@@ -59,9 +55,27 @@ def extrair_nome_metodo(nome_completo):
         return match.group(1)
     return nome_completo
 
-
 def atualizar_html(soup, dados_api):
     novos_metodos = []
+
+    # Localiza a <div class="container"> onde devemos adicionar a nova div.table-container
+    container_div = soup.find("div", class_="container")
+
+    if not container_div:
+        print("❌ Não foi encontrada a <div class='container'> no HTML.")
+        return
+
+    # Localiza a <div class="table-container"> onde vamos adicionar os métodos
+    table_container = container_div.find("div", class_="table-container")
+
+    if not table_container:
+        print("❌ Não foi encontrada a <div class='table-container'> no HTML.")
+        return
+
+    tbody = table_container.find("tbody")
+    if not tbody:
+        print("❌ Não foi encontrada a <tbody> na tabela existente.")
+        return
 
     # Atualiza métodos existentes
     for tipo_evento in dados_api:
@@ -71,13 +85,14 @@ def atualizar_html(soup, dados_api):
             nome_formatado = extrair_nome_metodo(nome_completo)
             qtd_logs = metodo["quantidade"]
 
+            # Busca o método na tabela existente
             td_metodo = soup.find("td", string=nome_formatado)
             if td_metodo:
                 linha = td_metodo.find_parent("tr")
                 tds = linha.find_all("td")
-                if len(tds) >= 5:
+                if len(tds) >= 4:
                     tds[1].string = tipo
-                    tds[4].string = str(qtd_logs)
+                    tds[3].string = str(qtd_logs)
             else:
                 novos_metodos.append({
                     "metodo_completo": nome_completo,
@@ -86,47 +101,55 @@ def atualizar_html(soup, dados_api):
                     "quantidade": qtd_logs
                 })
 
-    # Adiciona métodos novos à categoria NEW (se houver)
+    # Adiciona métodos novos à nova tabela NEW
     if novos_metodos:
-        print(f"➕ Adicionando {len(novos_metodos)} métodos à categoria NEW...")
+        print(f"➕ Adicionando {len(novos_metodos)} métodos novos à tabela 'NEW'...")
 
-        # Garante existência da seção NEW
-        span_new = soup.find("span", string=lambda t: t and t.strip().lower() == "new")
-        if not span_new:
-            span_new = soup.new_tag("span")
-            span_new.string = "NEW"
-            soup.body.append(soup.new_tag("hr"))
-            soup.body.append(span_new)
+        # Cria a nova div.table-container para a nova tabela
+        div_new_container = soup.new_tag("div", **{"class": "table-container"})
+        
+        # Cria o título para a nova seção
+        span_new = soup.new_tag("span", **{"class": "category-title"})
+        span_new.string = "NEW"
+        div_new_container.append(span_new)
 
-            tabela_new = soup.new_tag("table")
-            thead = soup.new_tag("thead")
-            tr_head = soup.new_tag("tr")
-            for titulo in ["Método", "Tipo Evento", "Mensagem Base", "Condição de Disparo", "Quantidade Logs"]:
-                th = soup.new_tag("th")
-                th.string = titulo
-                tr_head.append(th)
-            thead.append(tr_head)
-            tabela_new.append(thead)
+        # Criação da nova tabela "NEW"
+        tabela_new = soup.new_tag("table")
+        colgroup = soup.new_tag("colgroup")
+        colgroup.append(soup.new_tag("col", style="width: 38%"))
+        colgroup.append(soup.new_tag("col", style="width: 9%"))
+        colgroup.append(soup.new_tag("col", style="width: 45%"))
+        colgroup.append(soup.new_tag("col", style="width: 8%"))
+        tabela_new.append(colgroup)
 
-            tbody_new = soup.new_tag("tbody")
-            tabela_new.append(tbody_new)
+        # Cabeçalho da nova tabela
+        thead = soup.new_tag("thead")
+        tr_head = soup.new_tag("tr")
+        for titulo in ["Método", "Tipo Evento", "Mensagem Base", "Quantidade Logs"]:
+            th = soup.new_tag("th")
+            th.string = titulo
+            tr_head.append(th)
+        thead.append(tr_head)
+        tabela_new.append(thead)
 
-            soup.body.append(tabela_new)
-        else:
-            tabela_new = span_new.find_next("table")
-            tbody_new = tabela_new.find("tbody")
+        # Corpo da nova tabela
+        tbody_new = soup.new_tag("tbody")
+        tabela_new.append(tbody_new)
+        
+        # Adiciona a nova tabela "NEW" à nova div.table-container
+        div_new_container.append(tabela_new)
 
+        # Preenche a tabela NEW com os novos métodos
         for item in novos_metodos:
             nova_linha = soup.new_tag("tr")
 
             # Campo 1: método formatado com title (tooltip)
             td_metodo = soup.new_tag("td")
             td_metodo.string = item["metodo_formatado"]
-            td_metodo["title"] = item["metodo_completo"]
             nova_linha.append(td_metodo)
 
             # Demais campos
-            for valor in [item["tipo"], "", "", str(item["quantidade"])]:
+            for valor in [item["tipo"], "", str(item["quantidade"])]:
                 td = soup.new_tag("td")
                 td.string = valor
                 nova_linha.append(td)
@@ -134,6 +157,8 @@ def atualizar_html(soup, dados_api):
             tbody_new.append(nova_linha)
             print(f"   ➕ Método novo: {item['metodo_formatado']} (de {item['metodo_completo']})")
 
+        # Adiciona a nova div.table-container com a tabela ao documento dentro da div.container
+        container_div.append(div_new_container)  # Isso coloca a nova div dentro da div.container
 
 def main():
     print("🔍 Gerando relatório de logs...")
@@ -144,7 +169,6 @@ def main():
     soup = carregar_html()
     atualizar_html(soup, dados_api)
     salvar_html(soup)
-
 
 if __name__ == "__main__":
     main()

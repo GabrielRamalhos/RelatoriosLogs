@@ -9,111 +9,154 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
   <style>
    body {
-    font-family: 'Inter', sans-serif; /* Mantendo Inter como fonte principal para o corpo */
-    margin: 0;
-    padding: 20px;
-    background-color: #f8fafc; /* Light gray background */
-    color: #334155; /* Darker text color */
-  }
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    background-color: #ffffff;
-    padding: 30px 40px; /* Aumentando o padding lateral do container */
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-  }
-  h1 {
-    font-family: 'Cambria', serif; /* Fonte Cambria para o título principal */
-    color: #1e293b; /* Darker blue-gray for main title */
-    font-size: 2.8rem; /* Larger font size */
-    font-weight: 700; /* Negrito */
-    margin-bottom: 25px; /* Aumentando a margem inferior */
-    text-align: center;
-    padding-top: 20px; /* Adicionando um pouco de padding no topo */
-  }
-  h2 {
-    font-family: 'Cambria', serif; /* Fonte Cambria para os subtítulos */
-    color: #334155; /* Slightly lighter for section titles */
-    font-size: 2rem; /* Medium font size */
-    font-weight: 700; /* Negrito */
-    padding-bottom: 10px;
-    margin-top: 50px; /* Aumentando a separação entre os blocos */
-    margin-bottom: 20px; /* Aumentando a margem inferior */
-  }
-  /* Estilização para os títulos de categoria dentro das tabelas */
-  .category-title {
-    font-family: 'Cambria', serif;
-    font-size: 1.5rem; /* Tamanho da fonte para os títulos de categoria */
-    font-weight: 700; /* Negrito */
-    color: #334155;
-    margin-top: 40px; /* Espaço acima do título da categoria */
-    margin-bottom: 15px; /* Espaço abaixo do título da categoria */
-    display: block; /* Garante que o span se comporte como um bloco para margens */
-  }
-table {
-  table-layout: fixed;      /* Força largura uniforme das colunas */
-  width: 100%;
-  border-collapse: collapse;
-  word-break: break-word;   /* Quebra palavras longas */
-}
+        font-family: "Inter", sans-serif;
+        margin: 0;
+        padding: 20px;
+        background-color: #f8fafc;
+        color: #334155;
+      }
 
-th, td {
-  overflow-wrap: break-word;     /* Garante quebra de linha dentro da célula */
-  word-break: break-word;
-  white-space: normal;           /* Permite quebra de linha natural */
-  vertical-align: top;
-}
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        background-color: #ffffff;
+        padding: 30px 40px;
+        border-radius: 12px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+      }
 
-  th {
-    background-color: #e2e8f0;
-    color: #475569;
-    font-weight: 700; /* Negrito para os cabeçalhos da tabela */
-    text-transform: uppercase;
-    font-size: 0.9rem; /* Levemente maior */
-  }
-  tr:last-child td {
-    border-bottom: none;
-  }
-  tr:hover {
-    background-color: #f1f5f9;
-  }
-  .info-box, .alert-box, .warning-box, .error-box {
-    padding: 18px; /* Aumentando o padding das caixas de informação */
-    margin-bottom: 20px; /* Aumentando a margem inferior das caixas */
-    border-radius: 8px;
-    font-size: 1rem; /* Levemente maior */
-    line-height: 1.6; /* Melhorando a legibilidade */
-  }
-  .info-box {
-    background-color: #e0f2fe;
-    border-left: 6px solid #0ea5e9;
-    color: #0369a1;
-  }
-  .alert-box {
-    background-color: #fffbeb;
-    border-left: 6px solid #f59e0b;
-    color: #b45309;
-  }
-  .warning-box {
-    background-color: #fef3c7;
-    border-left: 6px solid #fbbf24;
-    color: #92400e;
-  }
-  .error-box {
-    background-color: #fee2e2;
-    border-left: 6px solid #ef4444;
-    color: #be123c;
-  }
-  ul {
-    list-style-type: disc;
-    margin-left: 30px; /* Aumentando a margem da lista */
-    padding-left: 0;
-  }
-  li {
-    margin-bottom: 10px; /* Aumentando a margem entre os itens da lista */
-    color: #475569;
-  }
+      h1,
+      h2 {
+        font-family: "Cambria", serif;
+        font-weight: 700;
+      }
+
+      h1 {
+        color: #1e293b;
+        font-size: 2.8rem;
+        margin-bottom: 25px;
+        text-align: center;
+        padding-top: 20px;
+      }
+
+      h2 {
+        color: #334155;
+        font-size: 2rem;
+        padding-bottom: 10px;
+        margin: 50px 0 20px;
+      }
+
+      /* Título de categorias */
+      .category-title {
+        font-family: "Cambria", serif;
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: #334155;
+        padding-bottom: 15px;
+        display: block;
+      }
+
+      .table-container {
+        margin: 40px 0;
+        padding: 2%;
+        background-color: #f6f6f7;
+        border-radius: 10px;
+      }
+
+      table {
+        table-layout: fixed;
+        width: 100%;
+        border-collapse: collapse;
+        word-break: break-word;
+      }
+
+      th,
+      td {
+        overflow-wrap: break-word;
+        word-break: break-word;
+        white-space: normal;
+        vertical-align: top;
+        border: 1px solid rgb(218, 221, 224);
+      }
+
+      th {
+        background-color: #e2e8f0;
+        color: #475569;
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: 0.9rem;
+        vertical-align: middle;
+      }
+      
+      td {
+        padding: 8px;
+        vertical-align: middle;
+      }
+
+      /* Linhas da tabela */
+      tr {
+        border-bottom: 1px solid rgb(218, 221, 224);
+      }
+
+      tr:last-child td {
+        border-bottom: none;
+      }
+
+      tr:hover {
+        background-color: #f1f5f9;
+      }
+
+      tr td:not(:first-child) {
+        text-align: center;
+      }
+
+      /* Caixas informativas */
+      .info-box,
+      .alert-box,
+      .warning-box,
+      .error-box {
+        padding: 18px;
+        margin-bottom: 20px;
+        border-radius: 8px;
+        font-size: 1rem;
+        line-height: 1.6;
+      }
+
+      .info-box {
+        background-color: #e0f2fe;
+        border-left: 6px solid #0ea5e9;
+        color: #0369a1;
+      }
+
+      .alert-box {
+        background-color: #fffbeb;
+        border-left: 6px solid #f59e0b;
+        color: #b45309;
+      }
+
+      .warning-box {
+        background-color: #fef3c7;
+        border-left: 6px solid #fbbf24;
+        color: #92400e;
+      }
+
+      .error-box {
+        background-color: #fee2e2;
+        border-left: 6px solid #ef4444;
+        color: #be123c;
+      }
+
+      /* Listas */
+      ul {
+        list-style-type: disc;
+        margin-left: 30px;
+        padding-left: 0;
+      }
+
+      li {
+        margin-bottom: 10px;
+        color: #475569;
+      }
   </style>
  </head>
  <body>
@@ -128,2129 +171,1996 @@ th, td {
     <strong>
      Info:
     </strong>
-    Informações gerais sobre o funcionamento normal do sistema. São logs puramente informativos, úteis para rastrear ações rotineiras e operações concluídas com sucesso.
+    Informações gerais sobre o funcionamento normal
+        do sistema. São logs puramente informativos, úteis para rastrear ações
+        rotineiras e operações concluídas com sucesso.
    </div>
    <div class="alert-box">
     <strong>
      Alert:
     </strong>
-    Eventos que sinalizam uma condição incomum que exige atenção, mas que ainda não causou falha. Servem como um aviso antecipado de que algo fora do esperado pode estar se formando.
+    Eventos que sinalizam uma condição incomum que
+        exige atenção, mas que ainda não causou falha. Servem como um aviso
+        antecipado de que algo fora do esperado pode estar se formando.
    </div>
    <div class="warning-box">
     <strong>
      Warning:
     </strong>
-    Indica uma situação potencialmente problemática, que pode se tornar um erro se não for tratada. Geralmente não impede o funcionamento imediato do sistema, mas merece investigação.
+    Indica uma situação potencialmente
+        problemática, que pode se tornar um erro se não for tratada. Geralmente
+        não impede o funcionamento imediato do sistema, mas merece investigação.
    </div>
    <div class="error-box">
     <strong>
      Error:
     </strong>
-    Representa uma falha crítica ou impedimento na execução de um processo. Requer ação imediata para correção, pois normalmente afeta diretamente a operação do sistema.
+    Representa uma falha crítica ou impedimento na
+        execução de um processo. Requer ação imediata para correção, pois
+        normalmente afeta diretamente a operação do sistema.
    </div>
-   <span class="category-title">
-    🕒 Job: Lembretes
-   </span>
-   <table>
-    <thead>
-     <tr>
-      <th>
-       Método
-      </th>
-      <th>
-       Tipo Evento
-      </th>
-      <th>
-       Mensagem Base
-      </th>
-      <th>
-       Quantidade Logs
-      </th>
-     </tr>
-    </thead>
-    <tbody>
-     <tr>
-      <td>
-       GetLembretesProcessamentoAsync
-      </td>
-      <td>
-       Aviso
-      </td>
-      <td>
-       lembrete(s) com erro na collection Lembrete_Temp!
-      </td>
-      <td>
-      </td>
-      <td>
-       724
-      </td>
-     </tr>
-     <tr>
-      <td>
-       JobProcessarLembretes
-      </td>
-      <td>
-       Aviso
-      </td>
-      <td>
-       Iniciado a execução JobProcessarLembretes
-      </td>
-      <td>
-      </td>
-      <td>
-       724
-      </td>
-     </tr>
-     <tr>
-      <td>
-       ProcessarLembretesAsync
-      </td>
-      <td>
-       Aviso
-      </td>
-      <td>
-       Finalizado da execução do JobProcessarLembretes
-      </td>
-      <td>
-      </td>
-      <td>
-       722
-      </td>
-     </tr>
-    </tbody>
-   </table>
-   <span class="category-title">
-    📢 Meta (Facebook)
-   </span>
-   <table>
-    <thead>
-     <tr>
-      <th>
-       Método
-      </th>
-      <th>
-       Tipo Evento
-      </th>
-      <th>
-       Mensagem Base
-      </th>
-      <th>
-       Quantidade Logs
-      </th>
-     </tr>
-    </thead>
-    <tbody>
-     <tr>
-      <td>
-       PostEventParcialAsync
-      </td>
-      <td>
-       Erro
-      </td>
-      <td>
-       Erro ao processar método PostEventoConversao (Facebook/Meta)
-      </td>
-      <td>
-      </td>
-      <td>
-       228
-      </td>
-     </tr>
-     <tr>
-      <td>
-       PostEventCompletoAsync
-      </td>
-      <td>
-       Erro
-      </td>
-      <td>
-       Erro ao processar método PostEventoConversao (Facebook/Meta)
-      </td>
-      <td>
-      </td>
-      <td>
-       81
-      </td>
-     </tr>
-     <tr>
-      <td>
-       PostEventCompletoAsync
-      </td>
-      <td>
-      </td>
-      <td>
-       Objeto enviado ao Facebook/Meta
-      </td>
-      <td>
-      </td>
-      <td>
-      </td>
-     </tr>
-     <tr>
-      <td>
-       EnviarCustoPublicidadeMeta
-      </td>
-      <td>
-       Aviso
-      </td>
-      <td>
-       MonitorEnviarCustoPublicidadeMeta
-      </td>
-      <td>
-      </td>
-      <td>
-       436
-      </td>
-     </tr>
-    </tbody>
-   </table>
-   <span class="category-title">
-    📢 Tiktok
-   </span>
-   <table>
-    <thead>
-     <tr>
-      <th>
-       Método
-      </th>
-      <th>
-       Tipo Evento
-      </th>
-      <th>
-       Mensagem Base
-      </th>
-      <th>
-       Quantidade Logs
-      </th>
-     </tr>
-    </thead>
-    <tbody>
-     <tr>
-      <td>
-       PostEventCompletoAsync
-      </td>
-      <td>
-       Alerta
-      </td>
-      <td>
-       AccessTokenTikTok não cadastrado junto ao Office
-      </td>
-      <td>
-      </td>
-      <td>
-      </td>
-     </tr>
-     <tr>
-      <td>
-       🆕 New TikTokService+&lt;PostEventCompletoAsync&gt;d__21
-      </td>
-      <td>
-       Alerta
-      </td>
-      <td>
-       AccessTokenTikTok não cadastrado junto ao Office
-      </td>
-      <td>
-       -
-      </td>
-      <td>
-       6
-      </td>
-     </tr>
-    </tbody>
-   </table>
-   <span class="category-title">
-    💃 PostgreSQL
-   </span>
-   <table>
-    <thead>
-     <tr>
-      <th>
-       Método
-      </th>
-      <th>
-       Tipo Evento
-      </th>
-      <th>
-       Mensagem Base
-      </th>
-      <th>
-       Quantidade Logs
-      </th>
-     </tr>
-    </thead>
-    <tbody>
-     <tr>
-      <td>
-       SincronizarBilhetesVendidosAnalitico
-      </td>
-      <td>
-       Aviso
-      </td>
-      <td>
-       Iniciado/Finalizado sincronização automática de dados de FluxosCliente e BilhetesVendidos do MongoDB para o PostgreSQL
-      </td>
-      <td>
-      </td>
-      <td>
-       435
-      </td>
-     </tr>
-     <tr>
-      <td>
-       SincronizarBilhetesVendidos
-      </td>
-      <td>
-       Aviso
-      </td>
-      <td>
-       Iniciado/Finalizado sincronização automática de dados de FluxosCliente e BilhetesVendidos do MongoDB para o PostgreSQL
-      </td>
-      <td>
-      </td>
-      <td>
-       6
-      </td>
-     </tr>
-     <tr>
-      <td>
-       ResyncAnaliticoBI
-      </td>
-      <td>
-       Aviso
-      </td>
-      <td>
-       Iniciado/Finalizado sincronização dos bilhetes vendidos para PostgreSQL
-      </td>
-      <td>
-      </td>
-      <td>
-       206
-      </td>
-     </tr>
-     <tr>
-      <td>
-       Sincronizar
-      </td>
-      <td>
-       Aviso
-      </td>
-      <td>
-       SincronizarBilhetesVendidosPostgre iniciado/finalizadosincronização dos bilhetes vendidos para PostgreSQL
-      </td>
-      <td>
-      </td>
-      <td>
-       12
-      </td>
-     </tr>
-     <tr>
-      <td>
-       JobValidarSincronizacaoMongoPostgre
-      </td>
-      <td>
-       Aviso
-      </td>
-      <td>
-       Início/Finalizado da execução do JobValidarSincronizacaoMongoPostgre
-      </td>
-      <td>
-      </td>
-      <td>
-       2
-      </td>
-     </tr>
-     <tr>
-      <td>
-       JobSincronizarBilhetesPostgreMongo
-      </td>
-      <td>
-       Erro
-      </td>
-      <td>
-       Início da execução do JobSincronizarBilhetesPostgreMongo
-      </td>
-      <td>
-      </td>
-      <td>
-       1
-      </td>
-     </tr>
-     <tr>
-      <td>
-       JobSincronizarBilhetesPostgreMongo
-      </td>
-      <td>
-      </td>
-      <td>
-       Necessário informar um TipoExportacao válido
-      </td>
-      <td>
-      </td>
-      <td>
-      </td>
-     </tr>
-    </tbody>
-   </table>
-   <span class="category-title">
-    💰 Custo Publicidade
-   </span>
-   <table>
-    <thead>
-     <tr>
-      <th>
-       Método
-      </th>
-      <th>
-       Tipo Evento
-      </th>
-      <th>
-       Mensagem Base
-      </th>
-      <th>
-       Quantidade Logs
-      </th>
-     </tr>
-    </thead>
-    <tbody>
-     <tr>
-      <td>
-       JobCadastroCustoPublicidade
-      </td>
-      <td>
-       Erro
-      </td>
-      <td>
-       Início/Finalizado execução do JobCadastroCustoPublicidade
-      </td>
-      <td>
-      </td>
-      <td>
-       1
-      </td>
-     </tr>
-    </tbody>
-   </table>
-   <span class="category-title">
-    💬 PlugChat
-   </span>
-   <table>
-    <thead>
-     <tr>
-      <th>
-       Método
-      </th>
-      <th>
-       Tipo Evento
-      </th>
-      <th>
-       Mensagem Base
-      </th>
-      <th>
-       Quantidade Logs
-      </th>
-     </tr>
-    </thead>
-    <tbody>
-     <tr>
-      <td>
-       JobValidarStatusPlugChat
-      </td>
-      <td>
-       Aviso
-      </td>
-      <td>
-       Iniciando/Finalizando validação de status do PlugChatAPI
-      </td>
-      <td>
-      </td>
-      <td>
-       290
-      </td>
-     </tr>
-     <tr>
-      <td>
-       ValidarStatusPlugChatAsync
-      </td>
-      <td>
-       Erro
-      </td>
-      <td>
-       Não existe um número de WhatsApp conectado ao PlugChat!
-      </td>
-      <td>
-      </td>
-      <td>
-       145
-      </td>
-     </tr>
-    </tbody>
-   </table>
-   <span class="category-title">
-    💳 Mercado Pago
-   </span>
-   <table>
-    <thead>
-     <tr>
-      <th>
-       Método
-      </th>
-      <th>
-       Tipo Evento
-      </th>
-      <th>
-       Mensagem Base
-      </th>
-      <th>
-       Quantidade Logs
-      </th>
-     </tr>
-    </thead>
-    <tbody>
-     <tr>
-      <td>
-       GravarLogObjetoMercadoPagoAsync
-      </td>
-      <td>
-       Aviso
-      </td>
-      <td>
-       Objeto enviado ao MercadoPago, forma pagamento
-      </td>
-      <td>
-      </td>
-      <td>
-       477
-      </td>
-     </tr>
-     <tr>
-      <td>
-       UpdatePayment
-      </td>
-      <td>
-       Aviso
-      </td>
-      <td>
-       CallBack Recebido do Mercado Pago
-      </td>
-      <td>
-      </td>
-      <td>
-       1028
-      </td>
-     </tr>
-    </tbody>
-   </table>
-   <span class="category-title">
-    🧾 Pay4Fun
-   </span>
-   <table>
-    <thead>
-     <tr>
-      <th>
-       Método
-      </th>
-      <th>
-       Tipo Evento
-      </th>
-      <th>
-       Mensagem Base
-      </th>
-      <th>
-       Quantidade Logs
-      </th>
-     </tr>
-    </thead>
-    <tbody>
-     <tr>
-      <td>
-       EnviarPixClienteGanhadorAsync
-      </td>
-      <td>
-       Erro
-      </td>
-      <td>
-       Erro ao processar método PostGoOutPay4FunAsync
-      </td>
-      <td>
-      </td>
-      <td>
-       1
-      </td>
-     </tr>
-     <tr>
-      <td>
-       EnviarPixClienteGanhadorAsync
-      </td>
-      <td>
-       Aviso
-      </td>
-      <td>
-       Envio de pix ganhador Clique Ganhe via OrderComplete
-      </td>
-      <td>
-      </td>
-      <td>
-      </td>
-     </tr>
-     <tr>
-      <td>
-       Pay4FunGoConfirmation
-      </td>
-      <td>
-       Aviso
-      </td>
-      <td>
-       Erro ao processar callback da Pay4Fun! Exceção: Callback Pay4Fun com Status diferente do aceito para validar pagamento
-      </td>
-      <td>
-      </td>
-      <td>
-       12
-      </td>
-     </tr>
-     <tr>
-      <td>
-       CriarTransacaoPixPay4FunAsync
-      </td>
-      <td>
-       Aviso
-      </td>
-      <td>
-       Objeto para pagamento Pix enviado a Pay4Fun
-      </td>
-      <td>
-      </td>
-      <td>
-       49
-      </td>
-     </tr>
-     <tr>
-      <td>
-       PostTransacaoPixCustomerByOffice
-      </td>
-      <td>
-      </td>
-      <td>
-       Pay4FunException occurred: customer_account_must_be_approved
-      </td>
-      <td>
-      </td>
-      <td>
-      </td>
-     </tr>
-    </tbody>
-   </table>
-   <span class="category-title">
-    🧾 PagSeguro
-   </span>
-   <table>
-    <thead>
-     <tr>
-      <th>
-       Método
-      </th>
-      <th>
-       Tipo Evento
-      </th>
-      <th>
-       Mensagem Base
-      </th>
-      <th>
-       Quantidade Logs
-      </th>
-     </tr>
-    </thead>
-    <tbody>
-     <tr>
-      <td>
-       PagSeguroRetornarUpdatePayment
-      </td>
-      <td>
-       Aviso
-      </td>
-      <td>
-       Message: Recebido Callback PagSeguro \n
-      </td>
-      <td>
-      </td>
-      <td>
-       11
-      </td>
-     </tr>
-    </tbody>
-   </table>
-   <span class="category-title">
-    🧾 Click2Pay
-   </span>
-   <table>
-    <thead>
-     <tr>
-      <th>
-       Método
-      </th>
-      <th>
-       Tipo Evento
-      </th>
-      <th>
-       Mensagem Base
-      </th>
-      <th>
-       Quantidade Logs
-      </th>
-     </tr>
-    </thead>
-    <tbody>
-     <tr>
-      <td>
-       Click2PayUpdatePayment
-      </td>
-      <td>
-       Aviso
-      </td>
-      <td>
-       CallBack Recebido do Click2Pay
-      </td>
-      <td>
-      </td>
-      <td>
-      </td>
-     </tr>
-    </tbody>
-   </table>
-   <span class="category-title">
-    🧾 Notas
-   </span>
-   <table>
-    <thead>
-     <tr>
-      <th>
-       Método
-      </th>
-      <th>
-       Tipo Evento
-      </th>
-      <th>
-       Mensagem Base
-      </th>
-      <th>
-       Quantidade Logs
-      </th>
-     </tr>
-    </thead>
-    <tbody>
-     <tr>
-      <td>
-       JobProcessarNotasPendentes
-      </td>
-      <td>
-       Aviso
-      </td>
-      <td>
-       Início/Finalizado da execução do JobProcessarNotasPendentes
-      </td>
-      <td>
-      </td>
-      <td>
-       146
-      </td>
-     </tr>
-     <tr>
-      <td>
-       JobValidarCallbackNotaFiscal
-      </td>
-      <td>
-       Aviso
-      </td>
-      <td>
-       Início/Finalizado execução do JobValidarCallbackNotaFiscal
-      </td>
-      <td>
-      </td>
-      <td>
-       74
-      </td>
-     </tr>
-     <tr>
-      <td>
-       CallbackPlugNotas
-      </td>
-      <td>
-       Aviso
-      </td>
-      <td>
-       CallBack Recebido do PlugNotas
-      </td>
-      <td>
-      </td>
-      <td>
-       933
-      </td>
-     </tr>
-     <tr>
-      <td>
-       JobValidarEnvioNotasReceitaFederal
-      </td>
-      <td>
-       Aviso
-      </td>
-      <td>
-       InícioFinalização da execução do JobValidarEnvioNotasReceitaFederal
-      </td>
-      <td>
-      </td>
-      <td>
-       50
-      </td>
-     </tr>
-     <tr>
-      <td>
-       JobDownloadNotasFiscaisContabilidade
-      </td>
-      <td>
-       Aviso
-      </td>
-      <td>
-       Início/Finalizado execução do JobDownloadNotasFiscaisContabilidade
-      </td>
-      <td>
-      </td>
-      <td>
-       2
-      </td>
-     </tr>
-     <tr>
-      <td>
-       JobValidarSequenciaNotaFiscal
-      </td>
-      <td>
-       Aviso
-      </td>
-      <td>
-       Início da execução do JobValidarSequenciaNotaFiscal
-      </td>
-      <td>
-      </td>
-      <td>
-       2
-      </td>
-     </tr>
-     <tr>
-      <td>
-       JobValidarFaturasXNotasFiscais
-      </td>
-      <td>
-       Aviso
-      </td>
-      <td>
-       Início/Finalizado execução do JobValidarFaturasXNotasFiscais
-      </td>
-      <td>
-      </td>
-      <td>
-       2
-      </td>
-     </tr>
-     <tr>
-      <td>
-       ProcessarNFesPendentesAsync
-      </td>
-      <td>
-       Erro
-      </td>
-      <td>
-       Erro ao processar emissão da NFe com Id
-      </td>
-      <td>
-      </td>
-      <td>
-       2
-      </td>
-     </tr>
-     <tr>
-      <td>
-       JobDispararEmailAlertaNotasPendentes
-      </td>
-      <td>
-       Aviso
-      </td>
-      <td>
-       Início/Finalização execução do JobDispararEmailAlertaNotasPendentes
-      </td>
-      <td>
-      </td>
-      <td>
-       2
-      </td>
-     </tr>
-    </tbody>
-   </table>
-   <span class="category-title">
-    🔍 Google
-   </span>
-   <table>
-    <thead>
-     <tr>
-      <th>
-       Método
-      </th>
-      <th>
-       Tipo Evento
-      </th>
-      <th>
-       Mensagem Base
-      </th>
-      <th>
-       Quantidade Logs
-      </th>
-     </tr>
-    </thead>
-    <tbody>
-     <tr>
-      <td>
-       PostEventoConversaoGoogle
-      </td>
-      <td>
-       Aviso
-      </td>
-      <td>
-       Objeto enviado ao Google
-      </td>
-      <td>
-      </td>
-      <td>
-       2534
-      </td>
-     </tr>
-     <tr>
-      <td>
-       JobArquivarFluxoCliente
-      </td>
-      <td>
-       Aviso
-      </td>
-      <td>
-       Inicio/Finalização execução do JobArquivarFluxoCliente
-      </td>
-      <td>
-      </td>
-      <td>
-       2
-      </td>
-     </tr>
-     <tr>
-      <td>
-       EnviarCustoPublicidadeGoogleAds
-      </td>
-      <td>
-      </td>
-      <td>
-       Erro no cadastro de custo GoogleAds da ação
-      </td>
-      <td>
-      </td>
-      <td>
-      </td>
-     </tr>
-    </tbody>
-   </table>
-   <span class="category-title">
-    🧾 Prospecção
-   </span>
-   <table>
-    <thead>
-     <tr>
-      <th>
-       Método
-      </th>
-      <th>
-       Tipo Evento
-      </th>
-      <th>
-       Mensagem Base
-      </th>
-      <th>
-       Quantidade Logs
-      </th>
-     </tr>
-    </thead>
-    <tbody>
-     <tr>
-      <td>
-       JobSendEmailProspecs
-      </td>
-      <td>
-       Aviso
-      </td>
-      <td>
-       Início/Fim da execução do JobSendEmailProspecs
-      </td>
-      <td>
-      </td>
-      <td>
-       2
-      </td>
-     </tr>
-    </tbody>
-   </table>
-   <span class="category-title">
-    🧾 Fluxo
-   </span>
-   <table>
-    <thead>
-     <tr>
-      <th>
-       Método
-      </th>
-      <th>
-       Tipo Evento
-      </th>
-      <th>
-       Mensagem Base
-      </th>
-      <th>
-       Quantidade Logs
-      </th>
-     </tr>
-    </thead>
-    <tbody>
-     <tr>
-      <td>
-       Sincronizar
-      </td>
-      <td>
-       Aviso
-      </td>
-      <td>
-       SincronizarFluxoClientesPostgre,inciado/finalizado sincronização do fluxo de clientes para PostgreSQL
-      </td>
-      <td>
-      </td>
-      <td>
-      </td>
-     </tr>
-     <tr>
-      <td>
-       JobArquivarFluxoCliente
-      </td>
-      <td>
-       Aviso
-      </td>
-      <td>
-       Inicio/Finalização
-      </td>
-      <td>
-       execução do JobArquivarFluxoCliente
-      </td>
-      <td>
-      </td>
-     </tr>
-     <tr>
-      <td>
-       SincronizarFluxoClientes
-      </td>
-      <td>
-       Aviso
-      </td>
-      <td>
-       Iniciado/Finalizado a sincronização automática de dados de FluxosCliente e BilhetesVendidos do MongoDB para o PostgreSQL
-      </td>
-      <td>
-      </td>
-      <td>
-       78
-      </td>
-     </tr>
-    </tbody>
-   </table>
-   <span class="category-title">
-    🧾 MessageBird
-   </span>
-   <table>
-    <thead>
-     <tr>
-      <th>
-       Método
-      </th>
-      <th>
-       Tipo Evento
-      </th>
-      <th>
-       Mensagem Base
-      </th>
-      <th>
-       Quantidade Logs
-      </th>
-     </tr>
-    </thead>
-    <tbody>
-     <tr>
-      <td>
-       Callback MessageBird:
-      </td>
-      <td>
-       Aviso
-      </td>
-      <td>
-       SincronizarFluxoClientesPostgre,inciado/finalizado sincronização do fluxo de clientes para PostgreSQL
-      </td>
-      <td>
-      </td>
-      <td>
-      </td>
-     </tr>
-     <tr>
-      <td>
-       Webhook MessageBird:
-      </td>
-      <td>
-       Aviso
-      </td>
-      <td>
-       Inicio/Finalização
-      </td>
-      <td>
-      </td>
-      <td>
-      </td>
-      <td>
-      </td>
-     </tr>
-     <tr>
-      <td>
-       SendWebhookAsync:
-      </td>
-      <td>
-      </td>
-      <td>
-       Aviso
-      </td>
-      <td>
-       Falha no envio de webhook para o MessageBird! Exceção: Erro da API do MessageBird
-      </td>
-      <td>
-      </td>
-      <td>
-      </td>
-     </tr>
-     <tr>
-      <td>
-       EnviarWhatsappCompraConfirmadaAsync
-      </td>
-      <td>
-       Erro
-      </td>
-      <td>
-       Erro ao enviar mensagens de convite para o Grupo Retornar pelo WhatsApp
-      </td>
-      <td>
-      </td>
-      <td>
-       7
-      </td>
-     </tr>
-    </tbody>
-   </table>
-   <span class="category-title">
-    🧾 Authenticate
-   </span>
-   <table>
-    <thead>
-     <tr>
-      <th>
-       Método
-      </th>
-      <th>
-       Tipo Evento
-      </th>
-      <th>
-       Mensagem Base
-      </th>
-      <th>
-       Quantidade Logs
-      </th>
-     </tr>
-    </thead>
-    <tbody>
-     <tr>
-      <td>
-       Authenticate
-      </td>
-      <td>
-       Erro
-      </td>
-      <td>
-       responseMessage[Conta inativa! Verifique o email digitado ou contate o atendimento
-      </td>
-      <td>
-      </td>
-      <td>
-       3
-      </td>
-     </tr>
-     <tr>
-      <td>
-       Authenticate
-      </td>
-      <td>
-      </td>
-      <td>
-       Chave expirada!
-      </td>
-      <td>
-      </td>
-      <td>
-      </td>
-     </tr>
-     <tr>
-      <td>
-       Authenticate
-      </td>
-      <td>
-      </td>
-      <td>
-       Chave incorreta!
-      </td>
-      <td>
-      </td>
-      <td>
-      </td>
-     </tr>
-    </tbody>
-   </table>
-   <span class="category-title">
-    🧾 InfoBip
-   </span>
-   <table>
-    <thead>
-     <tr>
-      <th>
-       Método
-      </th>
-      <th>
-       Tipo Evento
-      </th>
-      <th>
-       Mensagem Base
-      </th>
-      <th>
-       Quantidade Logs
-      </th>
-     </tr>
-    </thead>
-    <tbody>
-     <tr>
-      <td>
-       EnviarMensagemAuthenticateAsync
-      </td>
-      <td>
-       Aviso
-      </td>
-      <td>
-       Erro ao Enviar Mensagem Authenticate
-      </td>
-      <td>
-      </td>
-      <td>
-      </td>
-     </tr>
-     <tr>
-      <td>
-       SaveLogFromMicroservices
-      </td>
-      <td>
-       Erro
-      </td>
-      <td>
-       LogFromMicrosservices] [IEC_Infobip] Erro ao processar mensagem no microsserviço Erro ao processar requisicao no Infobip! Detalhes
-      </td>
-      <td>
-      </td>
-      <td>
-       34
-      </td>
-     </tr>
-    </tbody>
-   </table>
-   <span class="category-title">
-    🧾 Relatórios
-   </span>
-   <table>
-    <thead>
-     <tr>
-      <th>
-       Método
-      </th>
-      <th>
-       Tipo Evento
-      </th>
-      <th>
-       Mensagem Base
-      </th>
-      <th>
-       Quantidade Logs
-      </th>
-     </tr>
-    </thead>
-    <tbody>
-     <tr>
-      <td>
-       JobDivergenciasApuracao
-      </td>
-      <td>
-       Aviso
-      </td>
-      <td>
-       Início/Finalizado execução do JobDivergenciasApuracao
-      </td>
-      <td>
-      </td>
-      <td>
-       2
-      </td>
-     </tr>
-     <tr>
-      <td>
-       ValidarRelatoriosApuracao
-      </td>
-      <td>
-       Aviso
-      </td>
-      <td>
-       Iniciado/Finalizado execução do método ValidarRelatoriosApuracao
-      </td>
-      <td>
-      </td>
-      <td>
-       2
-      </td>
-     </tr>
-     <tr>
-      <td>
-       JobArquivarRelatorioBilhetesVendidos
-      </td>
-      <td>
-       Erro
-      </td>
-      <td>
-       Início da execução do JobArquivarRelatorioBilhetesVendidos
-      </td>
-      <td>
-      </td>
-      <td>
-       1
-      </td>
-     </tr>
-     <tr>
-      <td>
-       JobArquivarRelatorioBilhetesVendidos
-      </td>
-      <td>
-      </td>
-      <td>
-       Exception of type 'System.OutOfMemoryException' was thrown
-      </td>
-      <td>
-      </td>
-      <td>
-      </td>
-     </tr>
-    </tbody>
-   </table>
-   <span class="category-title">
-    🧾 FrontError
-   </span>
-   <table>
-    <thead>
-     <tr>
-      <th>
-       Método
-      </th>
-      <th>
-       Tipo Evento
-      </th>
-      <th>
-       Mensagem Base
-      </th>
-      <th>
-       Quantidade Logs
-      </th>
-     </tr>
-    </thead>
-    <tbody>
-     <tr>
-      <td>
-       SaveLogFront
-      </td>
-      <td>
-       Erro
-      </td>
-      <td>
-       FrontErrorV3: MountOrderComplete
-      </td>
-      <td>
-      </td>
-      <td>
-       17
-      </td>
-     </tr>
-     <tr>
-      <td>
-       SaveLogFront
-      </td>
-      <td>
-      </td>
-      <td>
-       FrontErrorV3: createToken - MercadoPago
-      </td>
-      <td>
-      </td>
-      <td>
-      </td>
-     </tr>
-     <tr>
-      <td>
-       SaveLogFront
-      </td>
-      <td>
-      </td>
-      <td>
-       FrontErrorV3: purchaseUpSell
-      </td>
-      <td>
-      </td>
-      <td>
-      </td>
-     </tr>
-     <tr>
-      <td>
-       SaveLogFront
-      </td>
-      <td>
-      </td>
-      <td>
-       FrontErrorV3: Render Component - TypeError: Failed to fetch dynamically imported module
-      </td>
-      <td>
-      </td>
-      <td>
-      </td>
-     </tr>
-     <tr>
-      <td>
-       SaveLogFront
-      </td>
-      <td>
-      </td>
-      <td>
-       FrontErrorV3: createClick2PayToken
-      </td>
-      <td>
-      </td>
-      <td>
-      </td>
-     </tr>
-     <tr>
-      <td>
-       SaveLogFront
-      </td>
-      <td>
-      </td>
-      <td>
-       FrontErrorV3: Render Component - TypeError: Failed to fetch dynamically imported
-      </td>
-      <td>
-      </td>
-      <td>
-      </td>
-     </tr>
-     <tr>
-      <td>
-       SaveLogFront
-      </td>
-      <td>
-      </td>
-      <td>
-       FrontErrorV3: postMetaEvent
-      </td>
-      <td>
-      </td>
-      <td>
-      </td>
-     </tr>
-    </tbody>
-   </table>
-   <span class="category-title">
-    🧾 OrderComplete
-   </span>
-   <table>
-    <thead>
-     <tr>
-      <th>
-       Método
-      </th>
-      <th>
-       Tipo Evento
-      </th>
-      <th>
-       Mensagem Base
-      </th>
-      <th>
-       Quantidade Logs
-      </th>
-     </tr>
-    </thead>
-    <tbody>
-     <tr>
-      <td>
-       RecuperarPedidoFinalizado
-      </td>
-      <td>
-       Erro
-      </td>
-      <td>
-       Erro ao recuperar pedido finalizado: Necessário informar um IdFatura ou IdCarrinho válido!
-      </td>
-      <td>
-      </td>
-      <td>
-       1
-      </td>
-     </tr>
-     <tr>
-      <td>
-       GetOrderComplete
-      </td>
-      <td>
-       Erro
-      </td>
-      <td>
-       Erro ao carregar order complete: Informe um idCarrinho válido!
-      </td>
-      <td>
-      </td>
-      <td>
-       1
-      </td>
-     </tr>
-     <tr>
-      <td>
-       FinalizarPedido
-      </td>
-      <td>
-       Erro
-      </td>
-      <td>
-       ErroProcessado[Default] - Exceção: Erro ao reprocessar o pagamento da fatura com os fornecedores disponíveis!
-      </td>
-      <td>
-      </td>
-      <td>
-       47
-      </td>
-     </tr>
-    </tbody>
-   </table>
-   <span class="category-title">
-    🧾 Info
-   </span>
-   <table>
-    <thead>
-     <tr>
-      <th>
-       Método
-      </th>
-      <th>
-       Tipo Evento
-      </th>
-      <th>
-       Mensagem Base
-      </th>
-      <th>
-       Quantidade Logs
-      </th>
-     </tr>
-    </thead>
-    <tbody>
-     <tr>
-      <td>
-       JobUpdateQuantidadesBilhetesGerados
-      </td>
-      <td>
-       Aviso
-      </td>
-      <td>
-       Início/Finalizado execução do JobUpdateQuantidadesBilhetesGerados
-      </td>
-      <td>
-      </td>
-      <td>
-       26
-      </td>
-     </tr>
-     <tr>
-      <td>
-       JobValidarNumerosGeradosFaturaEtl
-      </td>
-      <td>
-       Aviso
-      </td>
-      <td>
-       Iniciado a execução
-      </td>
-      <td>
-      </td>
-      <td>
-       1
-      </td>
-     </tr>
-     <tr>
-      <td>
-       JobValidarRegistroItensFaturaEmEtl
-      </td>
-      <td>
-       Aviso
-      </td>
-      <td>
-       Iniciado a execução
-      </td>
-      <td>
-      </td>
-      <td>
-       1
-      </td>
-     </tr>
-     <tr>
-      <td>
-       JobSincronizarFaturasComFornecedores
-      </td>
-      <td>
-       Aviso
-      </td>
-      <td>
-       Iniciado a execução
-      </td>
-      <td>
-      </td>
-      <td>
-       1
-      </td>
-     </tr>
-     <tr>
-      <td>
-       JobEnviaEmailSmsApuracaoSorteio
-      </td>
-      <td>
-       Aviso
-      </td>
-      <td>
-       Execução do JobEnviaEmailApuracaoSorteio
-      </td>
-      <td>
-      </td>
-      <td>
-       4
-      </td>
-     </tr>
-     <tr>
-      <td>
-       AtivarAcoesAsync
-      </td>
-      <td>
-       Aviso
-      </td>
-      <td>
-       Iniciado a execução do método AtivarAcoesAsync
-      </td>
-      <td>
-      </td>
-      <td>
-       2
-      </td>
-     </tr>
-     <tr>
-      <td>
-       JobAtivarDesativarAcoes
-      </td>
-      <td>
-       Aviso
-      </td>
-      <td>
-       Início/Fim da execução do JobAtivarDesativarAcoes
-      </td>
-      <td>
-      </td>
-      <td>
-       2
-      </td>
-     </tr>
-     <tr>
-      <td>
-       JobArquivarHistoricos
-      </td>
-      <td>
-       Aviso
-      </td>
-      <td>
-       Início/Fim da execução do JobArquivarHistoricos
-      </td>
-      <td>
-      </td>
-      <td>
-       2
-      </td>
-     </tr>
-     <tr>
-      <td>
-       JobArquivarProspeccao
-      </td>
-      <td>
-       Aviso
-      </td>
-      <td>
-       Início/Fim execução do JobArquivarProspeccao
-      </td>
-      <td>
-      </td>
-      <td>
-       2
-      </td>
-     </tr>
-     <tr>
-      <td>
-       JobArquivarLogs
-      </td>
-      <td>
-       Aviso
-      </td>
-      <td>
-       Início/Fim da execução do JobArquivarLogs
-      </td>
-      <td>
-      </td>
-      <td>
-       2
-      </td>
-     </tr>
-     <tr>
-      <td>
-       Temp_VerificarProdutosSemTipoDocumentoFiscal
-      </td>
-      <td>
-       Alerta
-      </td>
-      <td>
-       Método [GerarDocumentosFiscaisDeVendaAsync]
-      </td>
-      <td>
-      </td>
-      <td>
-       462
-      </td>
-     </tr>
-     <tr>
-      <td>
-       SincronizarFaturasAsync
-      </td>
-      <td>
-       Aviso
-      </td>
-      <td>
-       [JobSincronizarFaturas] Finalizado a execução
-      </td>
-      <td>
-      </td>
-      <td>
-       1
-      </td>
-     </tr>
-     <tr>
-      <td>
-       JobEnviarEmailCodigoRastreio
-      </td>
-      <td>
-       Erro
-      </td>
-      <td>
-       Erro ao enviar emails com código de rastreio! Exceção: The LINQ expression
-      </td>
-      <td>
-      </td>
-      <td>
-       1
-      </td>
-     </tr>
-     <tr>
-      <td>
-       JobEnviarEmailCodigoRastreio
-      </td>
-      <td>
-      </td>
-      <td>
-       Início da execução do JobEnviarEmailCodigoRastreio
-      </td>
-      <td>
-      </td>
-      <td>
-      </td>
-     </tr>
-     <tr>
-      <td>
-       JobEmailBoletoPendente
-      </td>
-      <td>
-       Aviso
-      </td>
-      <td>
-       Início/Fim da execução do JobEmailBoletoPendente
-      </td>
-      <td>
-      </td>
-      <td>
-       2
-      </td>
-     </tr>
-     <tr>
-      <td>
-       UpdateStatusFaturaAsync
-      </td>
-      <td>
-       Alerta
-      </td>
-      <td>
-       A fatura '' não possui transactionId e por isso não pode ter seu status definido como 'Cancelado'. O status foi alterado para 'NaoGerada'
-      </td>
-      <td>
-      </td>
-      <td>
-       2
-      </td>
-     </tr>
-     <tr>
-      <td>
-       GravarLogTemporarioWarRoom217Async
-      </td>
-      <td>
-      </td>
-      <td>
-       Monitoramento de cross sell com flag IndicaCrossSell False
-      </td>
-      <td>
-      </td>
-      <td>
-      </td>
-     </tr>
-     <tr>
-      <td>
-       TransferirFaturasPorEmail
-      </td>
-      <td>
-      </td>
-      <td>
-       Transferência de faturas por emails requerida pelo usuário
-      </td>
-      <td>
-      </td>
-      <td>
-      </td>
-     </tr>
-     <tr>
-      <td>
-       GerarETL_ItensFaturasAnalitico
-      </td>
-      <td>
-      </td>
-      <td>
-       Processamento 'GerarETL_ItensFaturasAnalitico' Iniciado/Finalizado
-      </td>
-      <td>
-      </td>
-      <td>
-      </td>
-     </tr>
-     <tr>
-      <td>
-       GerarETL_ItensFaturasAnalitico
-      </td>
-      <td>
-      </td>
-      <td>
-       Must contain at least 1 request. (Parameter 'requests')
-      </td>
-      <td>
-      </td>
-      <td>
-      </td>
-     </tr>
-     <tr>
-      <td>
-       GetByUrl
-      </td>
-      <td>
-       Erro
-      </td>
-      <td>
-       Produto não encontrado!
-      </td>
-      <td>
-      </td>
-      <td>
-       15
-      </td>
-     </tr>
-     <tr>
-      <td>
-       GetConfiguracaoAcao
-      </td>
-      <td>
-      </td>
-      <td>
-       Value cannot be null. (Parameter 'O idAcao não pode ser nulo.')
-      </td>
-      <td>
-      </td>
-      <td>
-      </td>
-     </tr>
-     <tr>
-      <td>
-       GetCupomResumidoByCodigo
-      </td>
-      <td>
-       Erro
-      </td>
-      <td>
-       Cupom não encontrado! idLoja informado
-      </td>
-      <td>
-      </td>
-      <td>
-       2
-      </td>
-     </tr>
-     <tr>
-      <td>
-       GetUrlAcessoMinhaConta
-      </td>
-      <td>
-      </td>
-      <td>
-       A conta do cliente está inativa!
-      </td>
-      <td>
-      </td>
-      <td>
-      </td>
-     </tr>
-     <tr>
-      <td>
-       GetAllLinks
-      </td>
-      <td>
-      </td>
-      <td>
-       '=' is an unexpected token. The expected token is
-      </td>
-      <td>
-      </td>
-      <td>
-      </td>
-     </tr>
-     <tr>
-      <td>
-       MontarCheckout
-      </td>
-      <td>
-       Erro
-      </td>
-      <td>
-       Exception[Necessário informar o idCarrinho para recuperar o checkout!
-      </td>
-      <td>
-      </td>
-      <td>
-       6
-      </td>
-     </tr>
-     <tr>
-      <td>
-       MontarSelectKit
-      </td>
-      <td>
-       Erro
-      </td>
-      <td>
-       Exception[Erro ao montar SelectKit! O agrupamento da ação do produto não foi encontrado
-      </td>
-      <td>
-      </td>
-      <td>
-       3
-      </td>
-     </tr>
-     <tr>
-      <td>
-       GetAllByIdAcao
-      </td>
-      <td>
-       Erro
-      </td>
-      <td>
-       Nenhum contemplado encontrado para a ação com
-      </td>
-      <td>
-      </td>
-      <td>
-       3
-      </td>
-     </tr>
-     <tr>
-      <td>
-       PagamentoPorAcaoAsync
-      </td>
-      <td>
-       Erro
-      </td>
-      <td>
-       Erro ao processar o pagamento da fatura via
-      </td>
-      <td>
-      </td>
-      <td>
-       12
-      </td>
-     </tr>
-     <tr>
-      <td>
-       PostTokenAsync
-      </td>
-      <td>
-       Erro
-      </td>
-      <td>
-       Erro ao processar método PostToken via PostTokenAsync!Motivo: Sorry, the card zero dollar validation has failed
-      </td>
-      <td>
-      </td>
-      <td>
-       11
-      </td>
-     </tr>
-     <tr>
-      <td>
-       PostTokenAsync
-      </td>
-      <td>
-      </td>
-      <td>
-       Erro ao processar método PostToken via PostTokenAsync!Motivo: Oops! Something is not right, the payer's data is invalid
-      </td>
-      <td>
-      </td>
-      <td>
-      </td>
-     </tr>
-     <tr>
-      <td>
-       GenerateToken
-      </td>
-      <td>
-       Erro
-      </td>
-      <td>
-       Erro ao gerar token do Click2Pay
-      </td>
-      <td>
-      </td>
-      <td>
-       11
-      </td>
-     </tr>
-     <tr>
-      <td>
-       ValidateCode
-      </td>
-      <td>
-       Erro
-      </td>
-      <td>
-       Erro ao validar o código de autenticação 2FA pelo GoogleAuthenticator!
-      </td>
-      <td>
-      </td>
-      <td>
-       2
-      </td>
-     </tr>
-     <tr>
-      <td>
-       SendMessageChannelAsync
-      </td>
-      <td>
-       Erro
-      </td>
-      <td>
-       Erro ao processar requisição do Discord! Exceção: Cannot deserialize the current JSON
-      </td>
-      <td>
-      </td>
-      <td>
-       1
-      </td>
-     </tr>
-     <tr>
-      <td>
-       AplicarCupom
-      </td>
-      <td>
-      </td>
-      <td>
-       Cupom já adicionado no carrinho!
-      </td>
-      <td>
-      </td>
-      <td>
-      </td>
-     </tr>
-    </tbody>
-   </table>
-  </div>
-  <hr/>
-  <span>
-   NEW
-  </span>
-  <table>
-   <thead>
-    <tr>
-     <th>
-      Método
-     </th>
-     <th>
-      Tipo Evento
-     </th>
-     <th>
-      Mensagem Base
-     </th>
-     <th>
-      Condição de Disparo
-     </th>
-     <th>
-      Quantidade Logs
-     </th>
-    </tr>
-   </thead>
-   <tbody>
-    <tr>
-     <td title="   at Retornar.Infrastructure.Data.Repository.CarrinhoRepository.GravarLogTemporarioWarRoom217Async(Carrinho entity)
-   at Retornar.Infrastructure.Data.Repository.CarrinhoRepository.GravarLogTemporarioWarRoom217Async(Carrinho entity)
-   at Retornar.Infrastructure.Data.Repository.CarrinhoRepository.UpdateAsync(Carrinho entity)
-   at Retornar.Infrastructure.Data.Repository.CarrinhoRepository.UpdateAsync(Carrinho entity)
-   at Retornar.Application.Services.V3.CarrinhoAppService.UpdateCrossSellAsync(String idCarrinho, String idProduto, String referencia, Int32 quantidade, String idClienteLogado)
-   at Retornar.Application.Services.V3.CarrinhoAppService.UpdateCuponsCarrinhoAsync(CarrinhoViewModel carrinhoVM, Cliente cliente, List`1 agrupamentosCarrinho, String cupomUrl, Nullable`1 formaPagamento, Boolean indicaRecompra)
-   at Retornar.Application.Services.V3.CarrinhoAppService.AplicarCuponsAutomaticosAsync(CarrinhoViewModel carrinhoVM, List`1 listaCupons, Cliente cliente, List`1 agrupamentosCarrinho)
-   at Retornar.Application.Services.V3.CarrinhoAppService.GetValorMinimoVendaByAgrupamentoEProdPrincipalAsync(CarrinhoViewModel carrinhoVM, List`1 agrupamentosCarrinho)
-   at Retornar.Infrastructure.Data.Repository.AgrupamentoCheckoutRepository.GetByIdProdutoAsync(String idProduto)">
-      at Retornar.Infrastructure.Data.Repository.CarrinhoRepository.GravarLogTemporarioWarRoom217Async(Carrinho entity)
+   <div class="table-container">
+    <span class="category-title">
+     🕒 Job: Lembretes
+    </span>
+    <table>
+     <thead>
+      <tr>
+       <th>
+        Método
+       </th>
+       <th>
+        Tipo Evento
+       </th>
+       <th>
+        Mensagem Base
+       </th>
+       <th>
+        Quantidade Logs
+       </th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td>
+        GetLembretesProcessamentoAsync
+       </td>
+       <td>
+        Aviso
+       </td>
+       <td>
+        Lembrete(s) com erro na collection Lembrete_Temp!
+       </td>
+       <td>
+        150
+       </td>
+      </tr>
+      <tr>
+       <td>
+        JobProcessarLembretes
+       </td>
+       <td>
+        Aviso
+       </td>
+       <td>
+        Iniciado a execução JobProcessarLembretes
+       </td>
+       <td>
+        959
+       </td>
+      </tr>
+      <tr>
+       <td>
+        ProcessarLembretesAsync
+       </td>
+       <td>
+        Aviso
+       </td>
+       <td>
+        Finalizado da execução do JobProcessarLembretes
+       </td>
+       <td>
+        957
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+   <div class="table-container">
+    <span class="category-title">
+     📢 Meta (Facebook)
+    </span>
+    <table>
+     <thead>
+      <tr>
+       <th>
+        Método
+       </th>
+       <th>
+        Tipo Evento
+       </th>
+       <th>
+        Mensagem Base
+       </th>
+       <th>
+        Quantidade Logs
+       </th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td>
+        PostEventParcialAsync
+       </td>
+       <td>
+        Erro
+       </td>
+       <td>
+        Erro ao processar método PostEventoConversao (Facebook/Meta)
+       </td>
+       <td>
+        628
+       </td>
+      </tr>
+      <tr>
+       <td>
+        PostEventCompletoAsync
+       </td>
+       <td>
+        Erro
+       </td>
+       <td>
+        Erro ao processar método PostEventoConversao (Facebook/Meta)
+       </td>
+       <td>
+        5
+       </td>
+      </tr>
+      <tr>
+       <td>
+        PostEventCompletoAsync
+       </td>
+       <td>
+       </td>
+       <td>
+        Objeto enviado ao Facebook/Meta
+       </td>
+       <td>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        EnviarCustoPublicidadeMeta
+       </td>
+       <td>
+        Aviso
+       </td>
+       <td>
+        MonitorEnviarCustoPublicidadeMeta
+       </td>
+       <td>
+        574
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+   <div class="table-container">
+    <span class="category-title">
+     📢 Tiktok
+    </span>
+    <table>
+     <thead>
+      <tr>
+       <th>
+        Método
+       </th>
+       <th>
+        Tipo Evento
+       </th>
+       <th>
+        Mensagem Base
+       </th>
+       <th>
+        Quantidade Logs
+       </th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td>
+        PostEventCompletoAsync
+       </td>
+       <td>
+        Alerta
+       </td>
+       <td>
+        AccessTokenTikTok não cadastrado junto ao Office
+       </td>
+       <td>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        🆕 New TikTokService+&lt;PostEventCompletoAsync&gt;d__21
+       </td>
+       <td>
+        Alerta
+       </td>
+       <td>
+        AccessTokenTikTok não cadastrado junto ao Office
+       </td>
+       <td>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+   <div class="table-container">
+    <span class="category-title">
+     💃 PostgreSQL
+    </span>
+    <table>
+     <thead>
+      <tr>
+       <th>
+        Método
+       </th>
+       <th>
+        Tipo Evento
+       </th>
+       <th>
+        Mensagem Base
+       </th>
+       <th>
+        Quantidade Logs
+       </th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td>
+        SincronizarBilhetesVendidosAnalitico
+       </td>
+       <td>
+        Aviso
+       </td>
+       <td>
+        Iniciado/Finalizado sincronização automática de dados de
+                FluxosCliente e BilhetesVendidos do MongoDB para o PostgreSQL
+       </td>
+       <td>
+        576
+       </td>
+      </tr>
+      <tr>
+       <td>
+        SincronizarBilhetesVendidos
+       </td>
+       <td>
+        Aviso
+       </td>
+       <td>
+        Iniciado/Finalizado sincronização automática de dados de
+                FluxosCliente e BilhetesVendidos do MongoDB para o PostgreSQL
+       </td>
+       <td>
+        6
+       </td>
+      </tr>
+      <tr>
+       <td>
+        ResyncAnaliticoBI
+       </td>
+       <td>
+        Aviso
+       </td>
+       <td>
+        Iniciado/Finalizado sincronização dos bilhetes vendidos para
+                PostgreSQL
+       </td>
+       <td>
+        298
+       </td>
+      </tr>
+      <tr>
+       <td>
+        Sincronizar
+       </td>
+       <td>
+        Aviso
+       </td>
+       <td>
+        SincronizarBilhetesVendidosPostgre
+                iniciado/finalizadosincronização dos bilhetes vendidos para
+                PostgreSQL
+       </td>
+       <td>
+        12
+       </td>
+      </tr>
+      <tr>
+       <td>
+        JobValidarSincronizacaoMongoPostgre
+       </td>
+       <td>
+        Aviso
+       </td>
+       <td>
+        Início/Finalizado da execução do
+                JobValidarSincronizacaoMongoPostgre
+       </td>
+       <td>
+        2
+       </td>
+      </tr>
+      <tr>
+       <td>
+        JobSincronizarBilhetesPostgreMongo
+       </td>
+       <td>
+        Erro
+       </td>
+       <td>
+        Início da execução do JobSincronizarBilhetesPostgreMongo
+       </td>
+       <td>
+        1
+       </td>
+      </tr>
+      <tr>
+       <td>
+        JobSincronizarBilhetesPostgreMongo
+       </td>
+       <td>
+       </td>
+       <td>
+        Necessário informar um TipoExportacao válido
+       </td>
+       <td>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+   <div class="table-container">
+    <span class="category-title">
+     💰 Custo Publicidade
+    </span>
+    <table>
+     <thead>
+      <tr>
+       <th>
+        Método
+       </th>
+       <th>
+        Tipo Evento
+       </th>
+       <th>
+        Mensagem Base
+       </th>
+       <th>
+        Quantidade Logs
+       </th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td>
+        JobCadastroCustoPublicidade
+       </td>
+       <td>
+        Erro
+       </td>
+       <td>
+        Início/Finalizado execução do JobCadastroCustoPublicidade
+       </td>
+       <td>
+        2
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+   <div class="table-container">
+    <span class="category-title">
+     💬 PlugChat
+    </span>
+    <table>
+     <thead>
+      <tr>
+       <th>
+        Método
+       </th>
+       <th>
+        Tipo Evento
+       </th>
+       <th>
+        Mensagem Base
+       </th>
+       <th>
+        Quantidade Logs
+       </th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td>
+        JobValidarStatusPlugChat
+       </td>
+       <td>
+        Aviso
+       </td>
+       <td>
+        Iniciando/Finalizando validação de status do PlugChatAPI
+       </td>
+       <td>
+        384
+       </td>
+      </tr>
+      <tr>
+       <td>
+        ValidarStatusPlugChatAsync
+       </td>
+       <td>
+        Erro
+       </td>
+       <td>
+        Não existe um número de WhatsApp conectado ao PlugChat!
+       </td>
+       <td>
+        192
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+   <div class="table-container">
+    <span class="category-title">
+     💳 Mercado Pago
+    </span>
+    <table>
+     <thead>
+      <tr>
+       <th>
+        Método
+       </th>
+       <th>
+        Tipo Evento
+       </th>
+       <th>
+        Mensagem Base
+       </th>
+       <th>
+        Quantidade Logs
+       </th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td>
+        GravarLogObjetoMercadoPagoAsync
+       </td>
+       <td>
+        Aviso
+       </td>
+       <td>
+        Objeto enviado ao MercadoPago, forma pagamento
+       </td>
+       <td>
+        861
+       </td>
+      </tr>
+      <tr>
+       <td>
+        UpdatePayment
+       </td>
+       <td>
+        Aviso
+       </td>
+       <td>
+        CallBack Recebido do Mercado Pago
+       </td>
+       <td>
+        1810
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+   <div class="table-container">
+    <span class="category-title">
+     🧾 Pay4Fun
+    </span>
+    <table>
+     <thead>
+      <tr>
+       <th>
+        Método
+       </th>
+       <th>
+        Tipo Evento
+       </th>
+       <th>
+        Mensagem Base
+       </th>
+       <th>
+        Quantidade Logs
+       </th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td>
+        EnviarPixClienteGanhadorAsync
+       </td>
+       <td>
+        Erro
+       </td>
+       <td>
+        Erro ao processar método PostGoOutPay4FunAsync
+       </td>
+       <td>
+        1
+       </td>
+      </tr>
+      <tr>
+       <td>
+        EnviarPixClienteGanhadorAsync
+       </td>
+       <td>
+        Aviso
+       </td>
+       <td>
+        Envio de pix ganhador Clique Ganhe via OrderComplete
+       </td>
+       <td>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        Pay4FunGoConfirmation
+       </td>
+       <td>
+        Aviso
+       </td>
+       <td>
+        Erro ao processar callback da Pay4Fun! Exceção: Callback Pay4Fun
+                com Status diferente do aceito para validar pagamento
+       </td>
+       <td>
+        19
+       </td>
+      </tr>
+      <tr>
+       <td>
+        CriarTransacaoPixPay4FunAsync
+       </td>
+       <td>
+        Aviso
+       </td>
+       <td>
+        Objeto para pagamento Pix enviado a Pay4Fun
+       </td>
+       <td>
+        7
+       </td>
+      </tr>
+      <tr>
+       <td>
+        PostTransacaoPixCustomerByOffice
+       </td>
+       <td>
+       </td>
+       <td>
+        Pay4FunException occurred: customer_account_must_be_approved
+       </td>
+       <td>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+   <div class="table-container">
+    <span class="category-title">
+     🧾 PagSeguro
+    </span>
+    <table>
+     <thead>
+      <tr>
+       <th>
+        Método
+       </th>
+       <th>
+        Tipo Evento
+       </th>
+       <th>
+        Mensagem Base
+       </th>
+       <th>
+        Quantidade Logs
+       </th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td>
+        PagSeguroRetornarUpdatePayment
+       </td>
+       <td>
+        Aviso
+       </td>
+       <td>
+        Message: Recebido Callback PagSeguro \n
+       </td>
+       <td>
+        11
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+   <div class="table-container">
+    <span class="category-title">
+     🧾 Click2Pay
+    </span>
+    <table>
+     <thead>
+      <tr>
+       <th>
+        Método
+       </th>
+       <th>
+        Tipo Evento
+       </th>
+       <th>
+        Mensagem Base
+       </th>
+       <th>
+        Quantidade Logs
+       </th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td>
+        Click2PayUpdatePayment
+       </td>
+       <td>
+        Aviso
+       </td>
+       <td>
+        CallBack Recebido do Click2Pay
+       </td>
+       <td>
+        14
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+   <div class="table-container">
+    <span class="category-title">
+     🧾 Notas
+    </span>
+    <table>
+     <thead>
+      <tr>
+       <th>
+        Método
+       </th>
+       <th>
+        Tipo Evento
+       </th>
+       <th>
+        Mensagem Base
+       </th>
+       <th>
+        Quantidade Logs
+       </th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td>
+        JobProcessarNotasPendentes
+       </td>
+       <td>
+        Aviso
+       </td>
+       <td>
+        Início/Finalizado da execução do JobProcessarNotasPendentes
+       </td>
+       <td>
+        192
+       </td>
+      </tr>
+      <tr>
+       <td>
+        JobValidarCallbackNotaFiscal
+       </td>
+       <td>
+        Aviso
+       </td>
+       <td>
+        Início/Finalizado execução do JobValidarCallbackNotaFiscal
+       </td>
+       <td>
+        96
+       </td>
+      </tr>
+      <tr>
+       <td>
+        CallbackPlugNotas
+       </td>
+       <td>
+        Aviso
+       </td>
+       <td>
+        CallBack Recebido do PlugNotas
+       </td>
+       <td>
+        1613
+       </td>
+      </tr>
+      <tr>
+       <td>
+        JobValidarEnvioNotasReceitaFederal
+       </td>
+       <td>
+        Aviso
+       </td>
+       <td>
+        InícioFinalização da execução do
+                JobValidarEnvioNotasReceitaFederal
+       </td>
+       <td>
+        64
+       </td>
+      </tr>
+      <tr>
+       <td>
+        JobDownloadNotasFiscaisContabilidade
+       </td>
+       <td>
+        Aviso
+       </td>
+       <td>
+        Início/Finalizado execução do
+                JobDownloadNotasFiscaisContabilidade
+       </td>
+       <td>
+        2
+       </td>
+      </tr>
+      <tr>
+       <td>
+        JobValidarSequenciaNotaFiscal
+       </td>
+       <td>
+        Aviso
+       </td>
+       <td>
+        Início da execução do JobValidarSequenciaNotaFiscal
+       </td>
+       <td>
+        2
+       </td>
+      </tr>
+      <tr>
+       <td>
+        JobValidarFaturasXNotasFiscais
+       </td>
+       <td>
+        Aviso
+       </td>
+       <td>
+        Início/Finalizado execução do JobValidarFaturasXNotasFiscais
+       </td>
+       <td>
+        2
+       </td>
+      </tr>
+      <tr>
+       <td>
+        ProcessarNFesPendentesAsync
+       </td>
+       <td>
+        Erro
+       </td>
+       <td>
+        Erro ao processar emissão da NFe com Id
+       </td>
+       <td>
+        2
+       </td>
+      </tr>
+      <tr>
+       <td>
+        JobDispararEmailAlertaNotasPendentes
+       </td>
+       <td>
+        Aviso
+       </td>
+       <td>
+        Início/Finalização execução do
+                JobDispararEmailAlertaNotasPendentes
+       </td>
+       <td>
+        2
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+   <div class="table-container">
+    <span class="category-title">
+     🔍 Google
+    </span>
+    <table>
+     <thead>
+      <tr>
+       <th>
+        Método
+       </th>
+       <th>
+        Tipo Evento
+       </th>
+       <th>
+        Mensagem Base
+       </th>
+       <th>
+        Quantidade Logs
+       </th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td>
+        PostEventoConversaoGoogle
+       </td>
+       <td>
+        Aviso
+       </td>
+       <td>
+        Objeto enviado ao Google
+       </td>
+       <td>
+        4566
+       </td>
+      </tr>
+      <tr>
+       <td>
+        JobArquivarFluxoCliente
+       </td>
+       <td>
+        Aviso
+       </td>
+       <td>
+        Inicio/Finalização execução do JobArquivarFluxoCliente
+       </td>
+       <td>
+        2
+       </td>
+      </tr>
+      <tr>
+       <td>
+        EnviarCustoPublicidadeGoogleAds
+       </td>
+       <td>
+       </td>
+       <td>
+        Erro no cadastro de custo GoogleAds da ação
+       </td>
+       <td>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+   <div class="table-container">
+    <span class="category-title">
+     🧾 Prospecção
+    </span>
+    <table>
+     <thead>
+      <tr>
+       <th>
+        Método
+       </th>
+       <th>
+        Tipo Evento
+       </th>
+       <th>
+        Mensagem Base
+       </th>
+       <th>
+        Quantidade Logs
+       </th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td>
+        JobSendEmailProspecs
+       </td>
+       <td>
+        Aviso
+       </td>
+       <td>
+        Início/Fim da execução do JobSendEmailProspecs
+       </td>
+       <td>
+        2
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+   <div class="table-container">
+    <span class="category-title">
+     🧾 Fluxo
+    </span>
+    <table>
+     <thead>
+      <tr>
+       <th>
+        Método
+       </th>
+       <th>
+        Tipo Evento
+       </th>
+       <th>
+        Mensagem Base
+       </th>
+       <th>
+        Quantidade Logs
+       </th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td>
+        Sincronizar
+       </td>
+       <td>
+        Aviso
+       </td>
+       <td>
+        SincronizarFluxoClientesPostgre,inciado/finalizado sincronização
+                do fluxo de clientes para PostgreSQL
+       </td>
+       <td>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        JobArquivarFluxoCliente
+       </td>
+       <td>
+        Aviso
+       </td>
+       <td>
+        Inicio/Finalização execução do JobArquivarFluxoCliente
+       </td>
+       <td>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        SincronizarFluxoClientes
+       </td>
+       <td>
+        Aviso
+       </td>
+       <td>
+        Iniciado/Finalizado a sincronização automática de dados de
+                FluxosCliente e BilhetesVendidos do MongoDB para o PostgreSQL
+       </td>
+       <td>
+        96
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+   <div class="table-container">
+    <span class="category-title">
+     🧾 MessageBird
+    </span>
+    <table>
+     <thead>
+      <tr>
+       <th>
+        Método
+       </th>
+       <th>
+        Tipo Evento
+       </th>
+       <th>
+        Mensagem Base
+       </th>
+       <th>
+        Quantidade Logs
+       </th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td>
+        Callback MessageBird:
+       </td>
+       <td>
+        Aviso
+       </td>
+       <td>
+        SincronizarFluxoClientesPostgre,inciado/finalizado sincronização
+                do fluxo de clientes para PostgreSQL
+       </td>
+       <td>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        Webhook MessageBird:
+       </td>
+       <td>
+        Aviso
+       </td>
+       <td>
+        Inicio/Finalização
+       </td>
+       <td>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        SendWebhookAsync:
+       </td>
+       <td>
+        Aviso
+       </td>
+       <td>
+        Falha no envio de webhook para o MessageBird! Exceção: Erro da
+                API do MessageBird
+       </td>
+       <td>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        EnviarWhatsappCompraConfirmadaAsync
+       </td>
+       <td>
+        Erro
+       </td>
+       <td>
+        Erro ao enviar mensagens de convite para o Grupo Retornar pelo
+                WhatsApp
+       </td>
+       <td>
+        14
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+   <div class="table-container">
+    <span class="category-title">
+     🧾 Authenticate
+    </span>
+    <table>
+     <thead>
+      <tr>
+       <th>
+        Método
+       </th>
+       <th>
+        Tipo Evento
+       </th>
+       <th>
+        Mensagem Base
+       </th>
+       <th>
+        Quantidade Logs
+       </th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td>
+        Authenticate
+       </td>
+       <td>
+        Erro
+       </td>
+       <td>
+        responseMessage[Conta inativa! Verifique o email digitado ou
+                contate o atendimento
+       </td>
+       <td>
+        48
+       </td>
+      </tr>
+      <tr>
+       <td>
+        Authenticate
+       </td>
+       <td>
+       </td>
+       <td>
+        Chave expirada!
+       </td>
+       <td>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        Authenticate
+       </td>
+       <td>
+       </td>
+       <td>
+        Chave incorreta!
+       </td>
+       <td>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+   <div class="table-container">
+    <span class="category-title">
+     🧾 InfoBip
+    </span>
+    <table>
+     <thead>
+      <tr>
+       <th>
+        Método
+       </th>
+       <th>
+        Tipo Evento
+       </th>
+       <th>
+        Mensagem Base
+       </th>
+       <th>
+        Quantidade Logs
+       </th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td>
+        EnviarMensagemAuthenticateAsync
+       </td>
+       <td>
+        Aviso
+       </td>
+       <td>
+        Erro ao Enviar Mensagem Authenticate
+       </td>
+       <td>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        SaveLogFromMicroservices
+       </td>
+       <td>
+        Erro
+       </td>
+       <td>
+        LogFromMicrosservices] [IEC_Infobip] Erro ao processar mensagem
+                no microsserviço Erro ao processar requisicao no Infobip!
+                Detalhes
+       </td>
+       <td>
+        84
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+   <div class="table-container">
+    <span class="category-title">
+     🧾 Relatórios
+    </span>
+    <table>
+     <thead>
+      <tr>
+       <th>
+        Método
+       </th>
+       <th>
+        Tipo Evento
+       </th>
+       <th>
+        Mensagem Base
+       </th>
+       <th>
+        Quantidade Logs
+       </th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td>
+        JobDivergenciasApuracao
+       </td>
+       <td>
+        Aviso
+       </td>
+       <td>
+        Início/Finalizado execução do JobDivergenciasApuracao
+       </td>
+       <td>
+        2
+       </td>
+      </tr>
+      <tr>
+       <td>
+        ValidarRelatoriosApuracao
+       </td>
+       <td>
+        Aviso
+       </td>
+       <td>
+        Iniciado/Finalizado execução do método ValidarRelatoriosApuracao
+       </td>
+       <td>
+        2
+       </td>
+      </tr>
+      <tr>
+       <td>
+        JobArquivarRelatorioBilhetesVendidos
+       </td>
+       <td>
+        Erro
+       </td>
+       <td>
+        Início da execução do JobArquivarRelatorioBilhetesVendidos
+       </td>
+       <td>
+        1
+       </td>
+      </tr>
+      <tr>
+       <td>
+        JobArquivarRelatorioBilhetesVendidos
+       </td>
+       <td>
+       </td>
+       <td>
+        Exception of type 'System.OutOfMemoryException' was thrown
+       </td>
+       <td>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+   <div class="table-container">
+    <span class="category-title">
+     🧾 FrontError
+    </span>
+    <table>
+     <thead>
+      <tr>
+       <th>
+        Método
+       </th>
+       <th>
+        Tipo Evento
+       </th>
+       <th>
+        Mensagem Base
+       </th>
+       <th>
+        Quantidade Logs
+       </th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td>
+        SaveLogFront
+       </td>
+       <td>
+        Erro
+       </td>
+       <td>
+        FrontErrorV3: MountOrderComplete
+       </td>
+       <td>
+        56
+       </td>
+      </tr>
+      <tr>
+       <td>
+        SaveLogFront
+       </td>
+       <td>
+       </td>
+       <td>
+        FrontErrorV3: createToken - MercadoPago
+       </td>
+       <td>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        SaveLogFront
+       </td>
+       <td>
+       </td>
+       <td>
+        FrontErrorV3: purchaseUpSell
+       </td>
+       <td>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        SaveLogFront
+       </td>
+       <td>
+       </td>
+       <td>
+        FrontErrorV3: Render Component - TypeError: Failed to fetch
+                dynamically imported module
+       </td>
+       <td>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        SaveLogFront
+       </td>
+       <td>
+       </td>
+       <td>
+        FrontErrorV3: createClick2PayToken
+       </td>
+       <td>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        SaveLogFront
+       </td>
+       <td>
+       </td>
+       <td>
+        FrontErrorV3: Render Component - TypeError: Failed to fetch
+                dynamically imported
+       </td>
+       <td>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        SaveLogFront
+       </td>
+       <td>
+       </td>
+       <td>
+        FrontErrorV3: postMetaEvent
+       </td>
+       <td>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+   <div class="table-container">
+    <span class="category-title">
+     🧾 OrderComplete
+    </span>
+    <table>
+     <thead>
+      <tr>
+       <th>
+        Método
+       </th>
+       <th>
+        Tipo Evento
+       </th>
+       <th>
+        Mensagem Base
+       </th>
+       <th>
+        Quantidade Logs
+       </th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td>
+        RecuperarPedidoFinalizado
+       </td>
+       <td>
+        Erro
+       </td>
+       <td>
+        Erro ao recuperar pedido finalizado: Necessário informar um
+                IdFatura ou IdCarrinho válido!
+       </td>
+       <td>
+        2
+       </td>
+      </tr>
+      <tr>
+       <td>
+        GetOrderComplete
+       </td>
+       <td>
+        Erro
+       </td>
+       <td>
+        Erro ao carregar order complete: Informe um idCarrinho válido!
+       </td>
+       <td>
+        13
+       </td>
+      </tr>
+      <tr>
+       <td>
+        FinalizarPedido
+       </td>
+       <td>
+        Erro
+       </td>
+       <td>
+        ErroProcessado[Default] - Exceção: Erro ao reprocessar o
+                pagamento da fatura com os fornecedores disponíveis!
+       </td>
+       <td>
+        67
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+   <div class="table-container">
+    <span class="category-title">
+     🧾 Info
+    </span>
+    <table>
+     <thead>
+      <tr>
+       <th>
+        Método
+       </th>
+       <th>
+        Tipo Evento
+       </th>
+       <th>
+        Mensagem Base
+       </th>
+       <th>
+        Quantidade Logs
+       </th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td>
+        JobUpdateQuantidadesBilhetesGerados
+       </td>
+       <td>
+        Aviso
+       </td>
+       <td>
+        Início/Finalizado execução do
+                JobUpdateQuantidadesBilhetesGerados
+       </td>
+       <td>
+        32
+       </td>
+      </tr>
+      <tr>
+       <td>
+        JobValidarNumerosGeradosFaturaEtl
+       </td>
+       <td>
+        Aviso
+       </td>
+       <td>
+        Iniciado a execução
+       </td>
+       <td>
+        1
+       </td>
+      </tr>
+      <tr>
+       <td>
+        JobValidarRegistroItensFaturaEmEtl
+       </td>
+       <td>
+        Aviso
+       </td>
+       <td>
+        Iniciado a execução
+       </td>
+       <td>
+        1
+       </td>
+      </tr>
+      <tr>
+       <td>
+        JobSincronizarFaturasComFornecedores
+       </td>
+       <td>
+        Aviso
+       </td>
+       <td>
+        Iniciado a execução
+       </td>
+       <td>
+        1
+       </td>
+      </tr>
+      <tr>
+       <td>
+        JobEnviaEmailSmsApuracaoSorteio
+       </td>
+       <td>
+        Aviso
+       </td>
+       <td>
+        Execução do JobEnviaEmailApuracaoSorteio
+       </td>
+       <td>
+        4
+       </td>
+      </tr>
+      <tr>
+       <td>
+        AtivarAcoesAsync
+       </td>
+       <td>
+        Aviso
+       </td>
+       <td>
+        Iniciado a execução do método AtivarAcoesAsync
+       </td>
+       <td>
+        2
+       </td>
+      </tr>
+      <tr>
+       <td>
+        JobAtivarDesativarAcoes
+       </td>
+       <td>
+        Aviso
+       </td>
+       <td>
+        Início/Fim da execução do JobAtivarDesativarAcoes
+       </td>
+       <td>
+        2
+       </td>
+      </tr>
+      <tr>
+       <td>
+        JobArquivarHistoricos
+       </td>
+       <td>
+        Aviso
+       </td>
+       <td>
+        Início/Fim da execução do JobArquivarHistoricos
+       </td>
+       <td>
+        2
+       </td>
+      </tr>
+      <tr>
+       <td>
+        JobArquivarProspeccao
+       </td>
+       <td>
+        Aviso
+       </td>
+       <td>
+        Início/Fim execução do JobArquivarProspeccao
+       </td>
+       <td>
+        2
+       </td>
+      </tr>
+      <tr>
+       <td>
+        JobArquivarLogs
+       </td>
+       <td>
+        Aviso
+       </td>
+       <td>
+        Início/Fim da execução do JobArquivarLogs
+       </td>
+       <td>
+        2
+       </td>
+      </tr>
+      <tr>
+       <td>
+        Temp_VerificarProdutosSemTipoDocumentoFiscal
+       </td>
+       <td>
+        Alerta
+       </td>
+       <td>
+        Método [GerarDocumentosFiscaisDeVendaAsync]
+       </td>
+       <td>
+        801
+       </td>
+      </tr>
+      <tr>
+       <td>
+        SincronizarFaturasAsync
+       </td>
+       <td>
+        Aviso
+       </td>
+       <td>
+        [JobSincronizarFaturas] Finalizado a execução
+       </td>
+       <td>
+        1
+       </td>
+      </tr>
+      <tr>
+       <td>
+        JobEnviarEmailCodigoRastreio
+       </td>
+       <td>
+        Erro
+       </td>
+       <td>
+        Erro ao enviar emails com código de rastreio! Exceção: The LINQ
+                expression
+       </td>
+       <td>
+        1
+       </td>
+      </tr>
+      <tr>
+       <td>
+        JobEnviarEmailCodigoRastreio
+       </td>
+       <td>
+       </td>
+       <td>
+        Início da execução do JobEnviarEmailCodigoRastreio
+       </td>
+       <td>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        JobEmailBoletoPendente
+       </td>
+       <td>
+        Aviso
+       </td>
+       <td>
+        Início/Fim da execução do JobEmailBoletoPendente
+       </td>
+       <td>
+        2
+       </td>
+      </tr>
+      <tr>
+       <td>
+        UpdateStatusFaturaAsync
+       </td>
+       <td>
+        Alerta
+       </td>
+       <td>
+        A fatura '' não possui transactionId e por isso não pode ter seu
+                status definido como 'Cancelado'. O status foi alterado para
+                'NaoGerada'
+       </td>
+       <td>
+        2
+       </td>
+      </tr>
+      <tr>
+       <td>
+        GravarLogTemporarioWarRoom217Async
+       </td>
+       <td>
+       </td>
+       <td>
+        Monitoramento de cross sell com flag IndicaCrossSell False
+       </td>
+       <td>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        TransferirFaturasPorEmail
+       </td>
+       <td>
+       </td>
+       <td>
+        Transferência de faturas por emails requerida pelo usuário
+       </td>
+       <td>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        GerarETL_ItensFaturasAnalitico
+       </td>
+       <td>
+       </td>
+       <td>
+        Processamento 'GerarETL_ItensFaturasAnalitico'
+                Iniciado/Finalizado
+       </td>
+       <td>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        GerarETL_ItensFaturasAnalitico
+       </td>
+       <td>
+       </td>
+       <td>
+        Must contain at least 1 request. (Parameter 'requests')
+       </td>
+       <td>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        GetByUrl
+       </td>
+       <td>
+        Erro
+       </td>
+       <td>
+        Produto não encontrado!
+       </td>
+       <td>
+        25
+       </td>
+      </tr>
+      <tr>
+       <td>
+        GetConfiguracaoAcao
+       </td>
+       <td>
+       </td>
+       <td>
+        Value cannot be null. (Parameter 'O idAcao não pode ser nulo.')
+       </td>
+       <td>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        GetCupomResumidoByCodigo
+       </td>
+       <td>
+        Erro
+       </td>
+       <td>
+        Cupom não encontrado! idLoja informado
+       </td>
+       <td>
+        3
+       </td>
+      </tr>
+      <tr>
+       <td>
+        GetUrlAcessoMinhaConta
+       </td>
+       <td>
+       </td>
+       <td>
+        A conta do cliente está inativa!
+       </td>
+       <td>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        GetAllLinks
+       </td>
+       <td>
+       </td>
+       <td>
+        '=' is an unexpected token. The expected token is
+       </td>
+       <td>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        MontarCheckout
+       </td>
+       <td>
+        Erro
+       </td>
+       <td>
+        Exception[Necessário informar o idCarrinho para recuperar o
+                checkout!
+       </td>
+       <td>
+        24
+       </td>
+      </tr>
+      <tr>
+       <td>
+        MontarSelectKit
+       </td>
+       <td>
+        Erro
+       </td>
+       <td>
+        Exception[Erro ao montar SelectKit! O agrupamento da ação do
+                produto não foi encontrado
+       </td>
+       <td>
+        5
+       </td>
+      </tr>
+      <tr>
+       <td>
+        GetAllByIdAcao
+       </td>
+       <td>
+        Erro
+       </td>
+       <td>
+        Nenhum contemplado encontrado para a ação com
+       </td>
+       <td>
+        6
+       </td>
+      </tr>
+      <tr>
+       <td>
+        PagamentoPorAcaoAsync
+       </td>
+       <td>
+        Erro
+       </td>
+       <td>
+        Erro ao processar o pagamento da fatura via
+       </td>
+       <td>
+        24
+       </td>
+      </tr>
+      <tr>
+       <td>
+        PostTokenAsync
+       </td>
+       <td>
+        Erro
+       </td>
+       <td>
+        Erro ao processar método PostToken via PostTokenAsync!Motivo:
+                Sorry, the card zero dollar validation has failed
+       </td>
+       <td>
+        26
+       </td>
+      </tr>
+      <tr>
+       <td>
+        PostTokenAsync
+       </td>
+       <td>
+       </td>
+       <td>
+        Erro ao processar método PostToken via PostTokenAsync!Motivo:
+                Oops! Something is not right, the payer's data is invalid
+       </td>
+       <td>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        GenerateToken
+       </td>
+       <td>
+        Erro
+       </td>
+       <td>
+        Erro ao gerar token do Click2Pay
+       </td>
+       <td>
+        26
+       </td>
+      </tr>
+      <tr>
+       <td>
+        ValidateCode
+       </td>
+       <td>
+        Erro
+       </td>
+       <td>
+        Erro ao validar o código de autenticação 2FA pelo
+                GoogleAuthenticator!
+       </td>
+       <td>
+        2
+       </td>
+      </tr>
+      <tr>
+       <td>
+        SendMessageChannelAsync
+       </td>
+       <td>
+        Erro
+       </td>
+       <td>
+        Erro ao processar requisição do Discord! Exceção: Cannot
+                deserialize the current JSON
+       </td>
+       <td>
+        23
+       </td>
+      </tr>
+      <tr>
+       <td>
+        AplicarCupom
+       </td>
+       <td>
+       </td>
+       <td>
+        Cupom já adicionado no carrinho!
+       </td>
+       <td>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+   <div class="table-container">
+    <span class="category-title">
+     NEW
+    </span>
+    <table>
+     <colgroup>
+      <col style="width: 38%"/>
+      <col style="width: 9%"/>
+      <col style="width: 45%"/>
+      <col style="width: 8%"/>
+     </colgroup>
+     <thead>
+      <tr>
+       <th>
+        Método
+       </th>
+       <th>
+        Tipo Evento
+       </th>
+       <th>
+        Mensagem Base
+       </th>
+       <th>
+        Quantidade Logs
+       </th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td>
+        at Retornar.Infrastructure.Data.Repository.CarrinhoRepository.GravarLogTemporarioWarRoom217Async(Carrinho entity)
    at Retornar.Infrastructure.Data.Repository.CarrinhoRepository.GravarLogTemporarioWarRoom217Async(Carrinho entity)
    at Retornar.Infrastructure.Data.Repository.CarrinhoRepository.UpdateAsync(Carrinho entity)
    at Retornar.Infrastructure.Data.Repository.CarrinhoRepository.UpdateAsync(Carrinho entity)
@@ -2259,43 +2169,19 @@ th, td {
    at Retornar.Application.Services.V3.CarrinhoAppService.AplicarCuponsAutomaticosAsync(CarrinhoViewModel carrinhoVM, List`1 listaCupons, Cliente cliente, List`1 agrupamentosCarrinho)
    at Retornar.Application.Services.V3.CarrinhoAppService.GetValorMinimoVendaByAgrupamentoEProdPrincipalAsync(CarrinhoViewModel carrinhoVM, List`1 agrupamentosCarrinho)
    at Retornar.Infrastructure.Data.Repository.AgrupamentoCheckoutRepository.GetByIdProdutoAsync(String idProduto)
-     </td>
-     <td>
-      Alerta
-     </td>
-     <td>
-     </td>
-     <td>
-     </td>
-     <td>
-      10
-     </td>
-    </tr>
-    <tr>
-     <td title="Retornar.Application.Services.V3.FluxoClienteAppService+&lt;SetPropriedades&gt;d__11">
-      SetPropriedades
-     </td>
-     <td>
-      Alerta
-     </td>
-     <td>
-     </td>
-     <td>
-     </td>
-     <td>
-      9
-     </td>
-    </tr>
-    <tr>
-     <td title="   at Retornar.Infrastructure.Data.Repository.CarrinhoRepository.GravarLogTemporarioWarRoom217Async(Carrinho entity)
-   at Retornar.Infrastructure.Data.Repository.CarrinhoRepository.GravarLogTemporarioWarRoom217Async(Carrinho entity)
-   at Retornar.Infrastructure.Data.Repository.CarrinhoRepository.UpdateAsync(Carrinho entity)
-   at Retornar.Infrastructure.Data.Repository.CarrinhoRepository.UpdateAsync(Carrinho entity)
-   at Retornar.Application.Outsourcing.Services.FacebookService.PostEventCompletoAsync(String idCarrinho, NomeEvento nomeEvento, String eventSourceUrl, String fbc, String fbp, String eventId, String metodoOrigem)
-   at Retornar.Application.Outsourcing.Services.FacebookService.ValidarInformacoesFornecedor(String idLoja)
-   at Retornar.Application.Outsourcing.Services.FacebookService.NewFacebookAPI(String idLoja)
-   at Retornar.Infrastructure.Data.Repository.FornecedorRepository.GetByTipoProcessamentoELojaAsync(TipoProcessamento tipoProcessamento, String idLoja)">
-      at Retornar.Infrastructure.Data.Repository.CarrinhoRepository.GravarLogTemporarioWarRoom217Async(Carrinho entity)
+       </td>
+       <td>
+        Alerta
+       </td>
+       <td>
+       </td>
+       <td>
+        12
+       </td>
+      </tr>
+      <tr>
+       <td>
+        at Retornar.Infrastructure.Data.Repository.CarrinhoRepository.GravarLogTemporarioWarRoom217Async(Carrinho entity)
    at Retornar.Infrastructure.Data.Repository.CarrinhoRepository.GravarLogTemporarioWarRoom217Async(Carrinho entity)
    at Retornar.Infrastructure.Data.Repository.CarrinhoRepository.UpdateAsync(Carrinho entity)
    at Retornar.Infrastructure.Data.Repository.CarrinhoRepository.UpdateAsync(Carrinho entity)
@@ -2303,29 +2189,32 @@ th, td {
    at Retornar.Application.Outsourcing.Services.FacebookService.ValidarInformacoesFornecedor(String idLoja)
    at Retornar.Application.Outsourcing.Services.FacebookService.NewFacebookAPI(String idLoja)
    at Retornar.Infrastructure.Data.Repository.FornecedorRepository.GetByTipoProcessamentoELojaAsync(TipoProcessamento tipoProcessamento, String idLoja)
-     </td>
-     <td>
-      Alerta
-     </td>
-     <td>
-     </td>
-     <td>
-     </td>
-     <td>
-      8
-     </td>
-    </tr>
-    <tr>
-     <td title="   at Retornar.Infrastructure.Data.Repository.CarrinhoRepository.GravarLogTemporarioWarRoom217Async(Carrinho entity)
-   at Retornar.Infrastructure.Data.Repository.CarrinhoRepository.GravarLogTemporarioWarRoom217Async(Carrinho entity)
-   at Retornar.Infrastructure.Data.Repository.CarrinhoRepository.UpdateAsync(Carrinho entity)
-   at Retornar.Infrastructure.Data.Repository.CarrinhoRepository.UpdateAsync(Carrinho entity)
-   at Retornar.Application.Services.V3.CarrinhoAppService.MontarCheckoutFromSelectKitAsync(String idCarrinho, CompraViewModel selecaoCompra, String urlOrigem)
-   at Retornar.Application.Services.V3.CarrinhoAppService.UpdateCuponsCarrinhoAsync(CarrinhoViewModel carrinhoVM, Cliente cliente, List`1 agrupamentosCarrinho, String cupomUrl, Nullable`1 formaPagamento, Boolean indicaRecompra)
-   at Retornar.Application.Services.V3.CarrinhoAppService.AplicarCuponsAutomaticosAsync(CarrinhoViewModel carrinhoVM, List`1 listaCupons, Cliente cliente, List`1 agrupamentosCarrinho)
-   at Retornar.Application.Services.V3.CarrinhoAppService.GetValorMinimoVendaByAgrupamentoEProdPrincipalAsync(CarrinhoViewModel carrinhoVM, List`1 agrupamentosCarrinho)
-   at Retornar.Infrastructure.Data.Repository.AgrupamentoCheckoutRepository.GetByIdProdutoAsync(String idProduto)">
-      at Retornar.Infrastructure.Data.Repository.CarrinhoRepository.GravarLogTemporarioWarRoom217Async(Carrinho entity)
+       </td>
+       <td>
+        Alerta
+       </td>
+       <td>
+       </td>
+       <td>
+        11
+       </td>
+      </tr>
+      <tr>
+       <td>
+        SetPropriedades
+       </td>
+       <td>
+        Alerta
+       </td>
+       <td>
+       </td>
+       <td>
+        9
+       </td>
+      </tr>
+      <tr>
+       <td>
+        at Retornar.Infrastructure.Data.Repository.CarrinhoRepository.GravarLogTemporarioWarRoom217Async(Carrinho entity)
    at Retornar.Infrastructure.Data.Repository.CarrinhoRepository.GravarLogTemporarioWarRoom217Async(Carrinho entity)
    at Retornar.Infrastructure.Data.Repository.CarrinhoRepository.UpdateAsync(Carrinho entity)
    at Retornar.Infrastructure.Data.Repository.CarrinhoRepository.UpdateAsync(Carrinho entity)
@@ -2334,29 +2223,19 @@ th, td {
    at Retornar.Application.Services.V3.CarrinhoAppService.AplicarCuponsAutomaticosAsync(CarrinhoViewModel carrinhoVM, List`1 listaCupons, Cliente cliente, List`1 agrupamentosCarrinho)
    at Retornar.Application.Services.V3.CarrinhoAppService.GetValorMinimoVendaByAgrupamentoEProdPrincipalAsync(CarrinhoViewModel carrinhoVM, List`1 agrupamentosCarrinho)
    at Retornar.Infrastructure.Data.Repository.AgrupamentoCheckoutRepository.GetByIdProdutoAsync(String idProduto)
-     </td>
-     <td>
-      Alerta
-     </td>
-     <td>
-     </td>
-     <td>
-     </td>
-     <td>
-      4
-     </td>
-    </tr>
-    <tr>
-     <td title="   at Retornar.Infrastructure.Data.Repository.CarrinhoRepository.GravarLogTemporarioWarRoom217Async(Carrinho entity)
-   at Retornar.Infrastructure.Data.Repository.CarrinhoRepository.GravarLogTemporarioWarRoom217Async(Carrinho entity)
-   at Retornar.Infrastructure.Data.Repository.CarrinhoRepository.UpdateAsync(Carrinho entity)
-   at Retornar.Infrastructure.Data.Repository.CarrinhoRepository.UpdateAsync(Carrinho entity)
-   at Retornar.Application.Services.V3.CarrinhoAppService.RecuperarCheckoutAsync(String idCarrinho, String cupomUrl, String urlOrigem)
-   at Retornar.Application.Services.V3.CarrinhoAppService.UpdateCuponsCarrinhoAsync(CarrinhoViewModel carrinhoVM, Cliente cliente, List`1 agrupamentosCarrinho, String cupomUrl, Nullable`1 formaPagamento, Boolean indicaRecompra)
-   at Retornar.Application.Services.V3.CarrinhoAppService.AplicarCuponsAutomaticosAsync(CarrinhoViewModel carrinhoVM, List`1 listaCupons, Cliente cliente, List`1 agrupamentosCarrinho)
-   at Retornar.Application.Services.V3.CarrinhoAppService.GetValorMinimoVendaByAgrupamentoEProdPrincipalAsync(CarrinhoViewModel carrinhoVM, List`1 agrupamentosCarrinho)
-   at Retornar.Infrastructure.Data.Repository.AgrupamentoCheckoutRepository.GetByIdProdutoAsync(String idProduto)">
-      at Retornar.Infrastructure.Data.Repository.CarrinhoRepository.GravarLogTemporarioWarRoom217Async(Carrinho entity)
+       </td>
+       <td>
+        Alerta
+       </td>
+       <td>
+       </td>
+       <td>
+        5
+       </td>
+      </tr>
+      <tr>
+       <td>
+        at Retornar.Infrastructure.Data.Repository.CarrinhoRepository.GravarLogTemporarioWarRoom217Async(Carrinho entity)
    at Retornar.Infrastructure.Data.Repository.CarrinhoRepository.GravarLogTemporarioWarRoom217Async(Carrinho entity)
    at Retornar.Infrastructure.Data.Repository.CarrinhoRepository.UpdateAsync(Carrinho entity)
    at Retornar.Infrastructure.Data.Repository.CarrinhoRepository.UpdateAsync(Carrinho entity)
@@ -2365,29 +2244,19 @@ th, td {
    at Retornar.Application.Services.V3.CarrinhoAppService.AplicarCuponsAutomaticosAsync(CarrinhoViewModel carrinhoVM, List`1 listaCupons, Cliente cliente, List`1 agrupamentosCarrinho)
    at Retornar.Application.Services.V3.CarrinhoAppService.GetValorMinimoVendaByAgrupamentoEProdPrincipalAsync(CarrinhoViewModel carrinhoVM, List`1 agrupamentosCarrinho)
    at Retornar.Infrastructure.Data.Repository.AgrupamentoCheckoutRepository.GetByIdProdutoAsync(String idProduto)
-     </td>
-     <td>
-      Alerta
-     </td>
-     <td>
-     </td>
-     <td>
-     </td>
-     <td>
-      4
-     </td>
-    </tr>
-    <tr>
-     <td title="   at Retornar.Infrastructure.Data.Repository.CarrinhoRepository.GravarLogTemporarioWarRoom217Async(Carrinho entity)
-   at Retornar.Infrastructure.Data.Repository.CarrinhoRepository.GravarLogTemporarioWarRoom217Async(Carrinho entity)
-   at Retornar.Infrastructure.Data.Repository.CarrinhoRepository.UpdateAsync(Carrinho entity)
-   at Retornar.Infrastructure.Data.Repository.CarrinhoRepository.UpdateAsync(Carrinho entity)
-   at Retornar.Application.Services.FaturaAppService.ValidarCuponsAsync(ObjetosPedido objetosBase)
-   at Retornar.Application.Services.V3.CarrinhoAppService.UpdateCuponsCarrinhoAsync(CarrinhoViewModel carrinhoVM, Cliente cliente, List`1 agrupamentosCarrinho, String cupomUrl, Nullable`1 formaPagamento, Boolean indicaRecompra)
-   at Retornar.Application.Services.V3.CarrinhoAppService.AplicarCuponsAutomaticosAsync(CarrinhoViewModel carrinhoVM, List`1 listaCupons, Cliente cliente, List`1 agrupamentosCarrinho)
-   at Retornar.Application.Services.V3.CarrinhoAppService.GetValorMinimoVendaByAgrupamentoEProdPrincipalAsync(CarrinhoViewModel carrinhoVM, List`1 agrupamentosCarrinho)
-   at Retornar.Infrastructure.Data.Repository.AgrupamentoCheckoutRepository.GetByIdProdutoAsync(String idProduto)">
-      at Retornar.Infrastructure.Data.Repository.CarrinhoRepository.GravarLogTemporarioWarRoom217Async(Carrinho entity)
+       </td>
+       <td>
+        Alerta
+       </td>
+       <td>
+       </td>
+       <td>
+        5
+       </td>
+      </tr>
+      <tr>
+       <td>
+        at Retornar.Infrastructure.Data.Repository.CarrinhoRepository.GravarLogTemporarioWarRoom217Async(Carrinho entity)
    at Retornar.Infrastructure.Data.Repository.CarrinhoRepository.GravarLogTemporarioWarRoom217Async(Carrinho entity)
    at Retornar.Infrastructure.Data.Repository.CarrinhoRepository.UpdateAsync(Carrinho entity)
    at Retornar.Infrastructure.Data.Repository.CarrinhoRepository.UpdateAsync(Carrinho entity)
@@ -2396,28 +2265,19 @@ th, td {
    at Retornar.Application.Services.V3.CarrinhoAppService.AplicarCuponsAutomaticosAsync(CarrinhoViewModel carrinhoVM, List`1 listaCupons, Cliente cliente, List`1 agrupamentosCarrinho)
    at Retornar.Application.Services.V3.CarrinhoAppService.GetValorMinimoVendaByAgrupamentoEProdPrincipalAsync(CarrinhoViewModel carrinhoVM, List`1 agrupamentosCarrinho)
    at Retornar.Infrastructure.Data.Repository.AgrupamentoCheckoutRepository.GetByIdProdutoAsync(String idProduto)
-     </td>
-     <td>
-      Alerta
-     </td>
-     <td>
-     </td>
-     <td>
-     </td>
-     <td>
-      4
-     </td>
-    </tr>
-    <tr>
-     <td title="   at Retornar.Infrastructure.Data.Repository.CarrinhoRepository.GravarLogTemporarioWarRoom217Async(Carrinho entity)
-   at Retornar.Infrastructure.Data.Repository.CarrinhoRepository.GravarLogTemporarioWarRoom217Async(Carrinho entity)
-   at Retornar.Infrastructure.Data.Repository.CarrinhoRepository.UpdateAsync(Carrinho entity)
-   at Retornar.Infrastructure.Data.Repository.CarrinhoRepository.UpdateAsync(Carrinho entity)
-   at Retornar.Application.Services.V3.CarrinhoAppService.AplicarCupomDobroBilhetesAsync(CarrinhoViewModel carrinhoVM, CupomDesconto cupom, ObjetosPedido objetosBase)
-   at Retornar.Application.Services.V3.CarrinhoAppService.AplicarCupomDobroBilhetesAsync(CarrinhoViewModel carrinhoVM, CupomDesconto cupom, ObjetosPedido objetosBase)
-   at Retornar.Application.Services.FaturaAppService.AplicarCuponsPedidoFinalizadoAsync(CarrinhoViewModel carrinhoVM, ObjetosPedido objetosBase)
-   at Retornar.Infrastructure.Data.Repository.BaseRepository`1.GetByIdsAsync(IEnumerable`1 ids)">
-      at Retornar.Infrastructure.Data.Repository.CarrinhoRepository.GravarLogTemporarioWarRoom217Async(Carrinho entity)
+       </td>
+       <td>
+        Alerta
+       </td>
+       <td>
+       </td>
+       <td>
+        5
+       </td>
+      </tr>
+      <tr>
+       <td>
+        at Retornar.Infrastructure.Data.Repository.CarrinhoRepository.GravarLogTemporarioWarRoom217Async(Carrinho entity)
    at Retornar.Infrastructure.Data.Repository.CarrinhoRepository.GravarLogTemporarioWarRoom217Async(Carrinho entity)
    at Retornar.Infrastructure.Data.Repository.CarrinhoRepository.UpdateAsync(Carrinho entity)
    at Retornar.Infrastructure.Data.Repository.CarrinhoRepository.UpdateAsync(Carrinho entity)
@@ -2425,184 +2285,321 @@ th, td {
    at Retornar.Application.Services.V3.CarrinhoAppService.AplicarCupomDobroBilhetesAsync(CarrinhoViewModel carrinhoVM, CupomDesconto cupom, ObjetosPedido objetosBase)
    at Retornar.Application.Services.FaturaAppService.AplicarCuponsPedidoFinalizadoAsync(CarrinhoViewModel carrinhoVM, ObjetosPedido objetosBase)
    at Retornar.Infrastructure.Data.Repository.BaseRepository`1.GetByIdsAsync(IEnumerable`1 ids)
-     </td>
-     <td>
-      Alerta
-     </td>
-     <td>
-     </td>
-     <td>
-     </td>
-     <td>
-      4
-     </td>
-    </tr>
-    <tr>
-     <td title="Retornar.Core.Controllers.V1.CallbacksController+&lt;Pay4FunGoOutConfirmation&gt;d__13">
-      Pay4FunGoOutConfirmation
-     </td>
-     <td>
-      Aviso
-     </td>
-     <td>
-     </td>
-     <td>
-     </td>
-     <td>
-      18
-     </td>
-    </tr>
-    <tr>
-     <td title="Retornar.Application.Outsourcing.Services.AutomacaoMarketingService+&lt;SendWebhookAsync&gt;d__60">
-      SendWebhookAsync
-     </td>
-     <td>
-      Aviso
-     </td>
-     <td>
-     </td>
-     <td>
-     </td>
-     <td>
-      10
-     </td>
-    </tr>
-    <tr>
-     <td title="Retornar.Application.Services.GeradorEmailAppService+&lt;DispararAlertaClientePremiadoCliqueGanheAsync&gt;d__182">
-      DispararAlertaClientePremiadoCliqueGanheAsync
-     </td>
-     <td>
-      Erro
-     </td>
-     <td>
-     </td>
-     <td>
-     </td>
-     <td>
-      11
-     </td>
-    </tr>
-    <tr>
-     <td title="Retornar.Core.Controllers.V3.MinhaContaController+&lt;GetAllBilhetesCartinhasByCliente&gt;d__10">
-      GetAllBilhetesCartinhasByCliente
-     </td>
-     <td>
-      Erro
-     </td>
-     <td>
-     </td>
-     <td>
-     </td>
-     <td>
-      2
-     </td>
-    </tr>
-    <tr>
-     <td title="Retornar.Core.Controllers.V2.ClienteController+&lt;AuthenticateApp&gt;d__6">
-      AuthenticateApp
-     </td>
-     <td>
-      Erro
-     </td>
-     <td>
-     </td>
-     <td>
-     </td>
-     <td>
-      1
-     </td>
-    </tr>
-    <tr>
-     <td title="Retornar.Core.Controllers.V3.CheckoutController+&lt;MontarSelecionar&gt;d__5">
-      MontarSelecionar
-     </td>
-     <td>
-      Erro
-     </td>
-     <td>
-     </td>
-     <td>
-     </td>
-     <td>
-      1
-     </td>
-    </tr>
-    <tr>
-     <td title="Retornar.Core.Controllers.V1.ClienteController+&lt;PreCadastroClienteAcao&gt;d__30">
-      PreCadastroClienteAcao
-     </td>
-     <td>
-      Erro
-     </td>
-     <td>
-     </td>
-     <td>
-     </td>
-     <td>
-      1
-     </td>
-    </tr>
-    <tr>
-     <td title="Retornar.MVC.Loja.Controllers.HomeController &lt;Index&gt;d__6">
-      Index
-     </td>
-     <td>
-      Erro
-     </td>
-     <td>
-     </td>
-     <td>
-     </td>
-     <td>
-      1
-     </td>
-    </tr>
-    <tr>
-     <td title="Retornar.Core.Controllers.V1.CallbacksController+&lt;Pay4FunGoOutConfirmation&gt;d__13">
-      Pay4FunGoOutConfirmation
-     </td>
-     <td>
-      Erro
-     </td>
-     <td>
-     </td>
-     <td>
-     </td>
-     <td>
-      1
-     </td>
-    </tr>
-    <tr>
-     <td title="Retornar.Core.Controllers.V3.Pay4FunController+&lt;PostTransacaoPixCustomer&gt;d__5">
-      PostTransacaoPixCustomer
-     </td>
-     <td>
-      Erro
-     </td>
-     <td>
-     </td>
-     <td>
-     </td>
-     <td>
-      1
-     </td>
-    </tr>
-    <tr>
-     <td title="Retornar.Application.Outsourcing.Services.ExatoConsultaCpfService+&lt;ProcessarExcecaoAsync&gt;d__18">
-      ProcessarExcecaoAsync
-     </td>
-     <td>
-      Erro
-     </td>
-     <td>
-     </td>
-     <td>
-     </td>
-     <td>
-      1
-     </td>
-    </tr>
-   </tbody>
-  </table>
+       </td>
+       <td>
+        Alerta
+       </td>
+       <td>
+       </td>
+       <td>
+        5
+       </td>
+      </tr>
+      <tr>
+       <td>
+        at Retornar.Infrastructure.Data.Repository.CarrinhoRepository.GravarLogTemporarioWarRoom217Async(Carrinho entity)
+   at Retornar.Infrastructure.Data.Repository.CarrinhoRepository.GravarLogTemporarioWarRoom217Async(Carrinho entity)
+   at Retornar.Infrastructure.Data.Repository.CarrinhoRepository.UpdateAsync(Carrinho entity)
+   at Retornar.Infrastructure.Data.Repository.CarrinhoRepository.UpdateAsync(Carrinho entity)
+   at Retornar.Application.Services.V3.CarrinhoAppService.RecuperarCheckoutAsync(String idCarrinho, String cupomUrl, String urlOrigem)
+   at Retornar.Application.Services.V3.CarrinhoAppService.RedefinirBilhetesCheckoutRecuperadoAsync(CarrinhoViewModel carrinhoVM)
+   at Retornar.Infrastructure.Data.Repository.BaseRepository`1.GetByIdAsync(String id)
+       </td>
+       <td>
+        Alerta
+       </td>
+       <td>
+       </td>
+       <td>
+        4
+       </td>
+      </tr>
+      <tr>
+       <td>
+        at Retornar.Infrastructure.Data.Repository.CarrinhoRepository.GravarLogTemporarioWarRoom217Async(Carrinho entity)
+   at Retornar.Infrastructure.Data.Repository.CarrinhoRepository.GravarLogTemporarioWarRoom217Async(Carrinho entity)
+   at Retornar.Infrastructure.Data.Repository.CarrinhoRepository.UpdateAsync(Carrinho entity)
+   at Retornar.Infrastructure.Data.Repository.CarrinhoRepository.UpdateAsync(Carrinho entity)
+   at Retornar.Application.Services.V3.CarrinhoAppService.AdicionarOrderBumpAsync(String idCarrinho, String idClienteAutenticado, String idProduto, Int32 quantidade, String emailCliente, String cepDestino)
+   at Retornar.Application.Services.V3.CarrinhoAppService.UpdateCuponsCarrinhoAsync(CarrinhoViewModel carrinhoVM, Cliente cliente, List`1 agrupamentosCarrinho, String cupomUrl, Nullable`1 formaPagamento, Boolean indicaRecompra)
+   at Retornar.Application.Services.V3.CarrinhoAppService.AplicarCuponsAutomaticosAsync(CarrinhoViewModel carrinhoVM, List`1 listaCupons, Cliente cliente, List`1 agrupamentosCarrinho)
+   at Retornar.Application.Services.V3.CarrinhoAppService.GetValorMinimoVendaByAgrupamentoEProdPrincipalAsync(CarrinhoViewModel carrinhoVM, List`1 agrupamentosCarrinho)
+   at Retornar.Infrastructure.Data.Repository.AgrupamentoCheckoutRepository.GetByIdProdutoAsync(String idProduto)
+       </td>
+       <td>
+        Alerta
+       </td>
+       <td>
+       </td>
+       <td>
+        1
+       </td>
+      </tr>
+      <tr>
+       <td>
+        Pay4FunGoOutConfirmation
+       </td>
+       <td>
+        Aviso
+       </td>
+       <td>
+       </td>
+       <td>
+        27
+       </td>
+      </tr>
+      <tr>
+       <td>
+        SendWebhookAsync
+       </td>
+       <td>
+        Aviso
+       </td>
+       <td>
+       </td>
+       <td>
+        12
+       </td>
+      </tr>
+      <tr>
+       <td>
+        GetBannersXImagens
+       </td>
+       <td>
+        Erro
+       </td>
+       <td>
+       </td>
+       <td>
+        55
+       </td>
+      </tr>
+      <tr>
+       <td>
+        Index
+       </td>
+       <td>
+        Erro
+       </td>
+       <td>
+       </td>
+       <td>
+        52
+       </td>
+      </tr>
+      <tr>
+       <td>
+        GetAllAcaoByLoja
+       </td>
+       <td>
+        Erro
+       </td>
+       <td>
+       </td>
+       <td>
+        47
+       </td>
+      </tr>
+      <tr>
+       <td>
+        DispararEmailEmissaoNFe
+       </td>
+       <td>
+        Erro
+       </td>
+       <td>
+       </td>
+       <td>
+        24
+       </td>
+      </tr>
+      <tr>
+       <td>
+        DispararAlertaClientePremiadoCliqueGanheAsync
+       </td>
+       <td>
+        Erro
+       </td>
+       <td>
+       </td>
+       <td>
+        21
+       </td>
+      </tr>
+      <tr>
+       <td>
+        PreCadastroClienteAcao
+       </td>
+       <td>
+        Erro
+       </td>
+       <td>
+       </td>
+       <td>
+        7
+       </td>
+      </tr>
+      <tr>
+       <td>
+        GetAllBilhetesCartinhasByCliente
+       </td>
+       <td>
+        Erro
+       </td>
+       <td>
+       </td>
+       <td>
+        5
+       </td>
+      </tr>
+      <tr>
+       <td>
+        SendWhatsappCompraConfirmadaAsync
+       </td>
+       <td>
+        Erro
+       </td>
+       <td>
+       </td>
+       <td>
+        5
+       </td>
+      </tr>
+      <tr>
+       <td>
+        GetAcoesBannersAsync
+       </td>
+       <td>
+        Erro
+       </td>
+       <td>
+       </td>
+       <td>
+        4
+       </td>
+      </tr>
+      <tr>
+       <td>
+        GetPedidoDetalhado
+       </td>
+       <td>
+        Erro
+       </td>
+       <td>
+       </td>
+       <td>
+        3
+       </td>
+      </tr>
+      <tr>
+       <td>
+        CriarTransacaoCartaoAsync
+       </td>
+       <td>
+        Erro
+       </td>
+       <td>
+       </td>
+       <td>
+        3
+       </td>
+      </tr>
+      <tr>
+       <td>
+        GetResumoBilhetesByCliente
+       </td>
+       <td>
+        Erro
+       </td>
+       <td>
+       </td>
+       <td>
+        2
+       </td>
+      </tr>
+      <tr>
+       <td>
+        GetAllEBooksByCliente
+       </td>
+       <td>
+        Erro
+       </td>
+       <td>
+       </td>
+       <td>
+        2
+       </td>
+      </tr>
+      <tr>
+       <td>
+        AuthenticateApp
+       </td>
+       <td>
+        Erro
+       </td>
+       <td>
+       </td>
+       <td>
+        1
+       </td>
+      </tr>
+      <tr>
+       <td>
+        MontarSelecionar
+       </td>
+       <td>
+        Erro
+       </td>
+       <td>
+       </td>
+       <td>
+        1
+       </td>
+      </tr>
+      <tr>
+       <td>
+        Pay4FunGoOutConfirmation
+       </td>
+       <td>
+        Erro
+       </td>
+       <td>
+       </td>
+       <td>
+        1
+       </td>
+      </tr>
+      <tr>
+       <td>
+        PostTransacaoPixCustomer
+       </td>
+       <td>
+        Erro
+       </td>
+       <td>
+       </td>
+       <td>
+        1
+       </td>
+      </tr>
+      <tr>
+       <td>
+        ProcessarExcecaoAsync
+       </td>
+       <td>
+        Erro
+       </td>
+       <td>
+       </td>
+       <td>
+        1
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+  </div>
  </body>
+ <script src="../script.js">
+ </script>
 </html>
