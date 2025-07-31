@@ -166,22 +166,22 @@
       <h1>📄 Relatório de Logs</h1>
       <h2>Tipos de Evento</h2>
       <div class="info-box">
-        <strong>Info:</strong> Informações gerais sobre o funcionamento normal
+        <strong>Info</strong> Informações gerais sobre o funcionamento normal
         do sistema. São logs puramente informativos, úteis para rastrear ações
         rotineiras e operações concluídas com sucesso.
       </div>
       <div class="alert-box">
-        <strong>Alert:</strong> Eventos que sinalizam uma condição incomum que
+        <strong>Alert</strong> Eventos que sinalizam uma condição incomum que
         exige atenção, mas que ainda não causou falha. Servem como um aviso
         antecipado de que algo fora do esperado pode estar se formando.
       </div>
       <div class="warning-box">
-        <strong>Warning:</strong> Indica uma situação potencialmente
+        <strong>Warning</strong> Indica uma situação potencialmente
         problemática, que pode se tornar um erro se não for tratada. Geralmente
         não impede o funcionamento imediato do sistema, mas merece investigação.
       </div>
       <div class="error-box">
-        <strong>Error:</strong> Representa uma falha crítica ou impedimento na
+        <strong>Error</strong> Representa uma falha crítica ou impedimento na
         execução de um processo. Requer ação imediata para correção, pois
         normalmente afeta diretamente a operação do sistema.
       </div>
@@ -483,6 +483,14 @@
               </td>
               <td></td>
             </tr>
+            <tr>
+              <td>Pay4FunGoOutConfirmation</td>
+              <td></td>
+              <td>
+               Erro com status failed recebido no CallBack da pay4Fun no ProcessarCallBackPay4FunGoOutAsync
+              </td>
+              <td></td>
+            </tr>
           </tbody>
         </table>
       </div>
@@ -718,7 +726,7 @@
           </thead>
           <tbody>
             <tr>
-              <td>Callback MessageBird:</td>
+              <td>Callback MessageBird</td>
               <td>Aviso</td>
               <td>
                 SincronizarFluxoClientesPostgre,inciado/finalizado sincronização
@@ -727,13 +735,13 @@
               <td></td>
             </tr>
             <tr>
-              <td>Webhook MessageBird:</td>
+              <td>Webhook MessageBird</td>
               <td>Aviso</td>
               <td>Inicio/Finalização</td>
               <td></td>
             </tr>
             <tr>
-              <td>SendWebhookAsync:</td>
+              <td>SendWebhookAsync</td>
               <td>Aviso</td>
               <td>
                 Falha no envio de webhook para o MessageBird! Exceção: Erro da
@@ -981,6 +989,22 @@
             </tr>
           </thead>
           <tbody>
+            <tr>
+              <td>LoginSeguro</td>
+              <td></td>
+              <td>
+                Nenhuma conta cadastrada para esse email!
+              </td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>LoginSeguro</td>
+              <td></td>
+              <td>
+                Esta conta está inativa!
+              </td>
+              <td></td>
+            </tr>
             <tr>
               <td>JobUpdateQuantidadesBilhetesGerados</td>
               <td>Aviso</td>
