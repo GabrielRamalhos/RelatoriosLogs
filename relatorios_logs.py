@@ -27,7 +27,6 @@ def salvar_html(soup):
 def obter_dados_api():
     print("🌐 Consultando API...")
     response = requests.get(API_URL, headers=HEADERS)
-
     print("🔁 Status:", response.status_code)
 
     try:
@@ -49,11 +48,14 @@ def obter_dados_api():
     return data["content"]
 
 def extrair_nome_metodo(nome_completo):
-    """Extrai apenas o nome do método entre < > ou retorna o nome original."""
     match = re.search(r"<([^>]+)>", nome_completo)
-    if match:
-        return match.group(1)
-    return nome_completo
+    return match.group(1) if match else nome_completo
+
+def resumir_mensagem(mensagem):
+    """Retorna a mensagem base resumida até 'Parâmetros' ou string vazia se for nula."""
+    if not mensagem or mensagem.strip().lower() in ("null", "none"):
+        return ""
+    return mensagem.split("Parâmetros")[0].strip()
 
 def atualizar_html(soup, dados_api):
     novos_metodos = []
@@ -79,7 +81,7 @@ def atualizar_html(soup, dados_api):
             nome_completo = metodo["metodo"]
             nome_formatado = extrair_nome_metodo(nome_completo)
             qtd_logs = metodo["quantidade"]
-            mensagem_base = metodo.get("mensagemBase", "")
+            mensagem_base = resumir_mensagem(metodo.get("mensagemBase", ""))
 
             td_metodo = soup.find("td", string=nome_formatado)
             if td_metodo:
