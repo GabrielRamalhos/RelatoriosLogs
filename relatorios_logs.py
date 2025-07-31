@@ -105,7 +105,11 @@ def atualizar_html(soup, dados_api):
 
         div_new_container = soup.new_tag("div", **{"class": "table-container"})
         span_new = soup.new_tag("span", **{"class": "category-title"})
-        span_new.string = "NEW"
+        img_tag = soup.new_tag("img", src="../images/new.svg", alt="New")
+        span_new.append(img_tag)
+        span_new.append(" New")
+
+        # Adiciona o span ao div
         div_new_container.append(span_new)
 
         tabela_new = soup.new_tag("table")

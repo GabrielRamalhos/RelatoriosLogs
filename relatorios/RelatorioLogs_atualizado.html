@@ -53,7 +53,8 @@
         font-weight: 700;
         color: #334155;
         padding-bottom: 15px;
-        display: block;
+        display: flex;
+        gap: 10px;
       }
 
       .table-container {
@@ -157,6 +158,22 @@
         margin-bottom: 10px;
         color: #475569;
       }
+
+      span > img {
+        width: 30px;
+      }
+
+      .alert-text {
+        color: #b45309;
+      }
+      
+      .warning-text {
+        color: #92400e;
+      }
+      
+      .error-text {
+        color: #be123c;
+      }
   </style>
  </head>
  <body>
@@ -201,7 +218,8 @@
    </div>
    <div class="table-container">
     <span class="category-title">
-     🕒 Job: Lembretes
+     <img alt="Job: Lembretes" src="../images/job-lembretes.svg"/>
+     Job: Lembretes
     </span>
     <table>
      <thead>
@@ -225,39 +243,39 @@
        <td>
         GetLembretesProcessamentoAsync
        </td>
-       <td>
+       <td class="warning-text">
         Aviso
        </td>
        <td>
        </td>
        <td>
-        644
+        875
        </td>
       </tr>
       <tr>
        <td>
         JobProcessarLembretes
        </td>
-       <td>
+       <td class="warning-text">
         Aviso
        </td>
        <td>
        </td>
        <td>
-        644
+        875
        </td>
       </tr>
       <tr>
        <td>
         ProcessarLembretesAsync
        </td>
-       <td>
+       <td class="warning-text">
         Aviso
        </td>
        <td>
        </td>
        <td>
-        644
+        875
        </td>
       </tr>
      </tbody>
@@ -265,7 +283,8 @@
    </div>
    <div class="table-container">
     <span class="category-title">
-     📢 Meta (Facebook)
+     <img alt="Meta" src="../images/meta.svg"/>
+     Meta (Facebook)
     </span>
     <table>
      <thead>
@@ -289,26 +308,26 @@
        <td>
         PostEventParcialAsync
        </td>
-       <td>
+       <td class="warning-text">
         Erro
        </td>
        <td>
        </td>
        <td>
-        194
+        313
        </td>
       </tr>
       <tr>
        <td>
         PostEventCompletoAsync
        </td>
-       <td>
+       <td class="warning-text">
         Erro
        </td>
        <td>
        </td>
        <td>
-        81
+        127
        </td>
       </tr>
       <tr>
@@ -341,7 +360,8 @@
    </div>
    <div class="table-container">
     <span class="category-title">
-     📢 Tiktok
+     <img alt="Tiktok" src="../images/tiktok.svg"/>
+     Tiktok
     </span>
     <table>
      <thead>
@@ -379,7 +399,8 @@
    </div>
    <div class="table-container">
     <span class="category-title">
-     💃 PostgreSQL
+     <img alt="PostgreSQL" src="../images/postgreSQL.svg"/>
+     PostgreSQL
     </span>
     <table>
      <thead>
@@ -409,7 +430,7 @@
        <td>
        </td>
        <td>
-        387
+        525
        </td>
       </tr>
       <tr>
@@ -435,7 +456,7 @@
        <td>
        </td>
        <td>
-        184
+        276
        </td>
       </tr>
       <tr>
@@ -494,7 +515,8 @@
    </div>
    <div class="table-container">
     <span class="category-title">
-     💰 Custo Publicidade
+     <img alt="Custo Publicidade" src="../images/custoPublicidade.svg"/>
+     Custo Publicidade
     </span>
     <table>
      <thead>
@@ -518,13 +540,13 @@
        <td>
         JobCadastroCustoPublicidade
        </td>
-       <td>
+       <td class="warning-text">
         Aviso
        </td>
        <td>
        </td>
        <td>
-        260
+        352
        </td>
       </tr>
      </tbody>
@@ -532,7 +554,8 @@
    </div>
    <div class="table-container">
     <span class="category-title">
-     💬 PlugChat
+     <img alt="PlugChat" src="../images/plugchat.svg"/>
+     PlugChat
     </span>
     <table>
      <thead>
@@ -556,13 +579,13 @@
        <td>
         JobValidarStatusPlugChat
        </td>
-       <td>
+       <td class="warning-text">
         Aviso
        </td>
        <td>
        </td>
        <td>
-        258
+        350
        </td>
       </tr>
       <tr>
@@ -575,7 +598,7 @@
        <td>
        </td>
        <td>
-        129
+        175
        </td>
       </tr>
      </tbody>
@@ -583,7 +606,8 @@
    </div>
    <div class="table-container">
     <span class="category-title">
-     💳 Mercado Pago
+     <img alt="Mercado Pago" src="../images/mercado-pago.svg"/>
+     Mercado Pago
     </span>
     <table>
      <thead>
@@ -607,26 +631,26 @@
        <td>
         GravarLogObjetoMercadoPagoAsync
        </td>
-       <td>
+       <td class="warning-text">
         Aviso
        </td>
        <td>
        </td>
        <td>
-        305
+        592
        </td>
       </tr>
       <tr>
        <td>
         UpdatePayment
        </td>
-       <td>
+       <td class="warning-text">
         Aviso
        </td>
        <td>
        </td>
        <td>
-        623
+        1222
        </td>
       </tr>
      </tbody>
@@ -634,7 +658,8 @@
    </div>
    <div class="table-container">
     <span class="category-title">
-     🧾 Pay4Fun
+     <img alt="Pay4Fun" src="../images/pay4fun.svg"/>
+     Pay4Fun
     </span>
     <table>
      <thead>
@@ -658,20 +683,20 @@
        <td>
         EnviarPixClienteGanhadorAsync
        </td>
-       <td>
+       <td class="warning-text">
         Aviso
        </td>
        <td>
        </td>
        <td>
-        3
+        5
        </td>
       </tr>
       <tr>
        <td>
         EnviarPixClienteGanhadorAsync
        </td>
-       <td>
+       <td class="warning-text">
         Aviso
        </td>
        <td>
@@ -684,7 +709,7 @@
        <td>
         Pay4FunGoConfirmation
        </td>
-       <td>
+       <td class="warning-text">
         Aviso
        </td>
        <td>
@@ -703,7 +728,7 @@
        <td>
        </td>
        <td>
-        5
+        6
        </td>
       </tr>
       <tr>
@@ -728,7 +753,7 @@
        <td>
        </td>
        <td>
-        3
+        5
        </td>
       </tr>
      </tbody>
@@ -736,7 +761,8 @@
    </div>
    <div class="table-container">
     <span class="category-title">
-     🧾 PagSeguro
+     <img alt="PagSeguro" src="../images/pag-seguro.svg"/>
+     PagSeguro
     </span>
     <table>
      <thead>
@@ -760,7 +786,7 @@
        <td>
         PagSeguroRetornarUpdatePayment
        </td>
-       <td>
+       <td class="warning-text">
         Aviso
        </td>
        <td>
@@ -774,7 +800,8 @@
    </div>
    <div class="table-container">
     <span class="category-title">
-     🧾 Click2Pay
+     <img alt="Click2Pay" src="../images/click2pay.svg"/>
+     Click2Pay
     </span>
     <table>
      <thead>
@@ -798,7 +825,7 @@
        <td>
         Click2PayUpdatePayment
        </td>
-       <td>
+       <td class="warning-text">
         Aviso
        </td>
        <td>
@@ -812,7 +839,8 @@
    </div>
    <div class="table-container">
     <span class="category-title">
-     🧾 Notas
+     <img alt="Notas" src="../images/notes.svg"/>
+     Notas
     </span>
     <table>
      <thead>
@@ -836,13 +864,13 @@
        <td>
         JobProcessarNotasPendentes
        </td>
-       <td>
+       <td class="warning-text">
         Aviso
        </td>
        <td>
        </td>
        <td>
-        130
+        176
        </td>
       </tr>
       <tr>
@@ -855,7 +883,7 @@
        <td>
        </td>
        <td>
-        64
+        88
        </td>
       </tr>
       <tr>
@@ -868,7 +896,7 @@
        <td>
        </td>
        <td>
-        565
+        1086
        </td>
       </tr>
       <tr>
@@ -881,7 +909,7 @@
        <td>
        </td>
        <td>
-        44
+        60
        </td>
       </tr>
       <tr>
@@ -953,7 +981,8 @@
    </div>
    <div class="table-container">
     <span class="category-title">
-     🔍 Google
+     <img alt="Google" src="../images/google.svg"/>
+     Google
     </span>
     <table>
      <thead>
@@ -977,20 +1006,20 @@
        <td>
         PostEventoConversaoGoogle
        </td>
-       <td>
+       <td class="warning-text">
         Aviso
        </td>
        <td>
        </td>
        <td>
-        1577
+        3017
        </td>
       </tr>
       <tr>
        <td>
         JobArquivarFluxoCliente
        </td>
-       <td>
+       <td class="warning-text">
         Aviso
        </td>
        <td>
@@ -1016,7 +1045,8 @@
    </div>
    <div class="table-container">
     <span class="category-title">
-     🧾 Prospecção
+     <img alt="Prospecção" src="../images/prospeccao.svg"/>
+     Prospecção
     </span>
     <table>
      <thead>
@@ -1040,7 +1070,7 @@
        <td>
         JobSendEmailProspecs
        </td>
-       <td>
+       <td class="warning-text">
         Aviso
        </td>
        <td>
@@ -1054,7 +1084,8 @@
    </div>
    <div class="table-container">
     <span class="category-title">
-     🧾 Fluxo
+     <img alt="Fluxo" src="../images/flow.svg"/>
+     Fluxo
     </span>
     <table>
      <thead>
@@ -1078,7 +1109,7 @@
        <td>
         Sincronizar
        </td>
-       <td>
+       <td class="warning-text">
         Aviso
        </td>
        <td>
@@ -1092,7 +1123,7 @@
        <td>
         JobArquivarFluxoCliente
        </td>
-       <td>
+       <td class="warning-text">
         Aviso
        </td>
        <td>
@@ -1105,13 +1136,13 @@
        <td>
         SincronizarFluxoClientes
        </td>
-       <td>
+       <td class="warning-text">
         Aviso
        </td>
        <td>
        </td>
        <td>
-        66
+        90
        </td>
       </tr>
      </tbody>
@@ -1119,7 +1150,8 @@
    </div>
    <div class="table-container">
     <span class="category-title">
-     🧾 MessageBird
+     <img alt="MessageBird" src="../images/messageBird.svg"/>
+     MessageBird
     </span>
     <table>
      <thead>
@@ -1143,7 +1175,7 @@
        <td>
         Callback MessageBird
        </td>
-       <td>
+       <td class="warning-text">
         Aviso
        </td>
        <td>
@@ -1157,7 +1189,7 @@
        <td>
         Webhook MessageBird
        </td>
-       <td>
+       <td class="warning-text">
         Aviso
        </td>
        <td>
@@ -1176,7 +1208,7 @@
        <td>
        </td>
        <td>
-        9
+        13
        </td>
       </tr>
       <tr>
@@ -1197,7 +1229,8 @@
    </div>
    <div class="table-container">
     <span class="category-title">
-     🧾 Authenticate
+     <img alt="Authenticate" src="../images/authenticate.svg"/>
+     Authenticate
     </span>
     <table>
      <thead>
@@ -1227,7 +1260,7 @@
        <td>
        </td>
        <td>
-        60
+        3
        </td>
       </tr>
       <tr>
@@ -1259,7 +1292,8 @@
    </div>
    <div class="table-container">
     <span class="category-title">
-     🧾 InfoBip
+     <img alt="InfoBip" src="../images/infobip.svg"/>
+     InfoBip
     </span>
     <table>
      <thead>
@@ -1302,7 +1336,7 @@
        <td>
        </td>
        <td>
-        37
+        70
        </td>
       </tr>
      </tbody>
@@ -1310,7 +1344,8 @@
    </div>
    <div class="table-container">
     <span class="category-title">
-     🧾 Relatórios
+     <img alt="Relatórios" src="../images/relatorios.svg"/>
+     Relatórios
     </span>
     <table>
      <thead>
@@ -1386,7 +1421,8 @@
    </div>
    <div class="table-container">
     <span class="category-title">
-     🧾 FrontError
+     <img alt="FrontError" src="../images/front-error.svg"/>
+     FrontError
     </span>
     <table>
      <thead>
@@ -1416,7 +1452,7 @@
        <td>
        </td>
        <td>
-        7
+        11
        </td>
       </tr>
       <tr>
@@ -1498,7 +1534,8 @@
    </div>
    <div class="table-container">
     <span class="category-title">
-     🧾 OrderComplete
+     <img alt="OrderComplete" src="../images/order-complete.svg"/>
+     OrderComplete
     </span>
     <table>
      <thead>
@@ -1554,7 +1591,7 @@
        <td>
        </td>
        <td>
-        21
+        29
        </td>
       </tr>
      </tbody>
@@ -1562,7 +1599,8 @@
    </div>
    <div class="table-container">
     <span class="category-title">
-     🧾 Info
+     <img alt="Info" src="../images/info.svg"/>
+     Info
     </span>
     <table>
      <thead>
@@ -1630,7 +1668,7 @@
        <td>
        </td>
        <td>
-        22
+        30
        </td>
       </tr>
       <tr>
@@ -1682,7 +1720,7 @@
        <td>
        </td>
        <td>
-        2
+        4
        </td>
       </tr>
       <tr>
@@ -1760,7 +1798,7 @@
        <td>
        </td>
        <td>
-        279
+        537
        </td>
       </tr>
       <tr>
@@ -1806,11 +1844,12 @@
         JobEmailBoletoPendente
        </td>
        <td>
+        Aviso
        </td>
        <td>
-        Início/Fim da execução do JobEmailBoletoPendente
        </td>
        <td>
+        2
        </td>
       </tr>
       <tr>
@@ -1823,19 +1862,7 @@
        <td>
        </td>
        <td>
-        1
-       </td>
-      </tr>
-      <tr>
-       <td>
-        GravarLogTemporarioWarRoom217Async
-       </td>
-       <td>
-       </td>
-       <td>
-        Monitoramento de cross sell com flag IndicaCrossSell False
-       </td>
-       <td>
+        4
        </td>
       </tr>
       <tr>
@@ -1885,7 +1912,7 @@
        <td>
        </td>
        <td>
-        17
+        22
        </td>
       </tr>
       <tr>
@@ -1910,7 +1937,7 @@
        <td>
        </td>
        <td>
-        3
+        7
        </td>
       </tr>
       <tr>
@@ -1943,12 +1970,12 @@
         MontarCheckout
        </td>
        <td>
+        Erro
        </td>
        <td>
-        Exception[Necessário informar o idCarrinho para recuperar o
-                checkout!
        </td>
        <td>
+        5
        </td>
       </tr>
       <tr>
@@ -1961,7 +1988,7 @@
        <td>
        </td>
        <td>
-        2
+        4
        </td>
       </tr>
       <tr>
@@ -1987,7 +2014,7 @@
        <td>
        </td>
        <td>
-        4
+        13
        </td>
       </tr>
       <tr>
@@ -2000,7 +2027,7 @@
        <td>
        </td>
        <td>
-        4
+        6
        </td>
       </tr>
       <tr>
@@ -2026,7 +2053,7 @@
        <td>
        </td>
        <td>
-        4
+        6
        </td>
       </tr>
       <tr>
@@ -2072,7 +2099,8 @@
    </div>
    <div class="table-container">
     <span class="category-title">
-     NEW
+     <img alt="New" src="../images/new.svg"/>
+     New
     </span>
     <table>
      <colgroup>
@@ -2100,6 +2128,122 @@
      <tbody>
       <tr>
        <td>
+        at Retornar.Infrastructure.Data.Repository.CarrinhoRepository.GravarLogTemporarioWarRoom217Async(Carrinho entity)
+   at Retornar.Infrastructure.Data.Repository.CarrinhoRepository.GravarLogTemporarioWarRoom217Async(Carrinho entity)
+   at Retornar.Infrastructure.Data.Repository.CarrinhoRepository.UpdateAsync(Carrinho entity)
+   at Retornar.Infrastructure.Data.Repository.CarrinhoRepository.UpdateAsync(Carrinho entity)
+   at Retornar.Application.Outsourcing.Services.FacebookService.PostEventCompletoAsync(String idCarrinho, NomeEvento nomeEvento, String eventSourceUrl, String fbc, String fbp, String eventId, String metodoOrigem)
+   at Retornar.Application.Outsourcing.Services.FacebookService.ValidarInformacoesFornecedor(String idLoja)
+   at Retornar.Application.Outsourcing.Services.FacebookService.NewFacebookAPI(String idLoja)
+   at Retornar.Infrastructure.Data.Repository.FornecedorRepository.GetByTipoProcessamentoELojaAsync(TipoProcessamento tipoProcessamento, String idLoja)
+       </td>
+       <td>
+        Alerta
+       </td>
+       <td>
+       </td>
+       <td>
+        3
+       </td>
+      </tr>
+      <tr>
+       <td>
+        SetPropriedades
+       </td>
+       <td>
+        Alerta
+       </td>
+       <td>
+       </td>
+       <td>
+        2
+       </td>
+      </tr>
+      <tr>
+       <td>
+        at Retornar.Infrastructure.Data.Repository.CarrinhoRepository.GravarLogTemporarioWarRoom217Async(Carrinho entity)
+   at Retornar.Infrastructure.Data.Repository.CarrinhoRepository.GravarLogTemporarioWarRoom217Async(Carrinho entity)
+   at Retornar.Infrastructure.Data.Repository.CarrinhoRepository.UpdateAsync(Carrinho entity)
+   at Retornar.Infrastructure.Data.Repository.CarrinhoRepository.UpdateAsync(Carrinho entity)
+   at Retornar.Application.Services.V3.CarrinhoAppService.MontarCheckoutFromSelectKitAsync(String idCarrinho, CompraViewModel selecaoCompra, String urlOrigem)
+   at Retornar.Application.Services.V3.CarrinhoAppService.UpdateCuponsCarrinhoAsync(CarrinhoViewModel carrinhoVM, Cliente cliente, List`1 agrupamentosCarrinho, String cupomUrl, Nullable`1 formaPagamento, Boolean indicaRecompra)
+   at Retornar.Application.Services.V3.CarrinhoAppService.AplicarCuponsAutomaticosAsync(CarrinhoViewModel carrinhoVM, List`1 listaCupons, Cliente cliente, List`1 agrupamentosCarrinho)
+   at Retornar.Application.Services.V3.CarrinhoAppService.GetValorMinimoVendaByAgrupamentoEProdPrincipalAsync(CarrinhoViewModel carrinhoVM, List`1 agrupamentosCarrinho)
+   at Retornar.Infrastructure.Data.Repository.AgrupamentoCheckoutRepository.GetByIdProdutoAsync(String idProduto)
+       </td>
+       <td>
+        Alerta
+       </td>
+       <td>
+       </td>
+       <td>
+        2
+       </td>
+      </tr>
+      <tr>
+       <td>
+        at Retornar.Infrastructure.Data.Repository.CarrinhoRepository.GravarLogTemporarioWarRoom217Async(Carrinho entity)
+   at Retornar.Infrastructure.Data.Repository.CarrinhoRepository.GravarLogTemporarioWarRoom217Async(Carrinho entity)
+   at Retornar.Infrastructure.Data.Repository.CarrinhoRepository.UpdateAsync(Carrinho entity)
+   at Retornar.Infrastructure.Data.Repository.CarrinhoRepository.UpdateAsync(Carrinho entity)
+   at Retornar.Application.Services.V3.CarrinhoAppService.RecuperarCheckoutAsync(String idCarrinho, String cupomUrl, String urlOrigem)
+   at Retornar.Application.Services.V3.CarrinhoAppService.UpdateCuponsCarrinhoAsync(CarrinhoViewModel carrinhoVM, Cliente cliente, List`1 agrupamentosCarrinho, String cupomUrl, Nullable`1 formaPagamento, Boolean indicaRecompra)
+   at Retornar.Application.Services.V3.CarrinhoAppService.AplicarCuponsAutomaticosAsync(CarrinhoViewModel carrinhoVM, List`1 listaCupons, Cliente cliente, List`1 agrupamentosCarrinho)
+   at Retornar.Application.Services.V3.CarrinhoAppService.GetValorMinimoVendaByAgrupamentoEProdPrincipalAsync(CarrinhoViewModel carrinhoVM, List`1 agrupamentosCarrinho)
+   at Retornar.Infrastructure.Data.Repository.AgrupamentoCheckoutRepository.GetByIdProdutoAsync(String idProduto)
+       </td>
+       <td>
+        Alerta
+       </td>
+       <td>
+       </td>
+       <td>
+        2
+       </td>
+      </tr>
+      <tr>
+       <td>
+        at Retornar.Infrastructure.Data.Repository.CarrinhoRepository.GravarLogTemporarioWarRoom217Async(Carrinho entity)
+   at Retornar.Infrastructure.Data.Repository.CarrinhoRepository.GravarLogTemporarioWarRoom217Async(Carrinho entity)
+   at Retornar.Infrastructure.Data.Repository.CarrinhoRepository.UpdateAsync(Carrinho entity)
+   at Retornar.Infrastructure.Data.Repository.CarrinhoRepository.UpdateAsync(Carrinho entity)
+   at Retornar.Application.Services.FaturaAppService.ValidarCuponsAsync(ObjetosPedido objetosBase)
+   at Retornar.Application.Services.V3.CarrinhoAppService.UpdateCuponsCarrinhoAsync(CarrinhoViewModel carrinhoVM, Cliente cliente, List`1 agrupamentosCarrinho, String cupomUrl, Nullable`1 formaPagamento, Boolean indicaRecompra)
+   at Retornar.Application.Services.V3.CarrinhoAppService.AplicarCuponsAutomaticosAsync(CarrinhoViewModel carrinhoVM, List`1 listaCupons, Cliente cliente, List`1 agrupamentosCarrinho)
+   at Retornar.Application.Services.V3.CarrinhoAppService.GetValorMinimoVendaByAgrupamentoEProdPrincipalAsync(CarrinhoViewModel carrinhoVM, List`1 agrupamentosCarrinho)
+   at Retornar.Infrastructure.Data.Repository.AgrupamentoCheckoutRepository.GetByIdProdutoAsync(String idProduto)
+       </td>
+       <td>
+        Alerta
+       </td>
+       <td>
+       </td>
+       <td>
+        1
+       </td>
+      </tr>
+      <tr>
+       <td>
+        at Retornar.Infrastructure.Data.Repository.CarrinhoRepository.GravarLogTemporarioWarRoom217Async(Carrinho entity)
+   at Retornar.Infrastructure.Data.Repository.CarrinhoRepository.GravarLogTemporarioWarRoom217Async(Carrinho entity)
+   at Retornar.Infrastructure.Data.Repository.CarrinhoRepository.UpdateAsync(Carrinho entity)
+   at Retornar.Infrastructure.Data.Repository.CarrinhoRepository.UpdateAsync(Carrinho entity)
+   at Retornar.Application.Services.V3.CarrinhoAppService.AplicarCupomDobroBilhetesAsync(CarrinhoViewModel carrinhoVM, CupomDesconto cupom, ObjetosPedido objetosBase)
+   at Retornar.Application.Services.V3.CarrinhoAppService.AplicarCupomDobroBilhetesAsync(CarrinhoViewModel carrinhoVM, CupomDesconto cupom, ObjetosPedido objetosBase)
+   at Retornar.Application.Services.FaturaAppService.AplicarCuponsPedidoFinalizadoAsync(CarrinhoViewModel carrinhoVM, ObjetosPedido objetosBase)
+   at Retornar.Infrastructure.Data.Repository.BaseRepository`1.GetByIdsAsync(IEnumerable`1 ids)
+       </td>
+       <td>
+        Alerta
+       </td>
+       <td>
+       </td>
+       <td>
+        1
+       </td>
+      </tr>
+      <tr>
+       <td>
         GetAllBilhetesCartinhasByCliente
        </td>
        <td>
@@ -2113,7 +2257,33 @@
       </tr>
       <tr>
        <td>
+        CriarTransacaoCartaoAsync
+       </td>
+       <td>
+        Erro
+       </td>
+       <td>
+       </td>
+       <td>
+        4
+       </td>
+      </tr>
+      <tr>
+       <td>
         AuthenticateApp
+       </td>
+       <td>
+        Erro
+       </td>
+       <td>
+       </td>
+       <td>
+        2
+       </td>
+      </tr>
+      <tr>
+       <td>
+        PreCadastroClienteAcao
        </td>
        <td>
         Erro
@@ -2139,7 +2309,33 @@
       </tr>
       <tr>
        <td>
-        CriarTransacaoCartaoAsync
+        ProcessarExcecaoAsync
+       </td>
+       <td>
+        Erro
+       </td>
+       <td>
+       </td>
+       <td>
+        1
+       </td>
+      </tr>
+      <tr>
+       <td>
+        PostFluxoCliente
+       </td>
+       <td>
+        Erro
+       </td>
+       <td>
+       </td>
+       <td>
+        1
+       </td>
+      </tr>
+      <tr>
+       <td>
+        GetAllByIdCliente
        </td>
        <td>
         Erro
