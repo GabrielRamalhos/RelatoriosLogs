@@ -20,8 +20,8 @@ namespace RelatoriosLogs
         private static readonly DateTime DataInicio = new DateTime(2025, 8, 7, 0, 0, 0);
         private static readonly DateTime DataFim = new DateTime(2025, 8, 7, 23, 59, 59);
         
-        private static string API_URL => $"https://backend-api-develop.retornar.com.br/v1/Log/logs/agrupados?dataInicio={DataInicio:yyyy-MM-ddTHH:mm:ss}&dataFim={DataFim:yyyy-MM-ddTHH:mm:ss}&incluirDescricoes=true";
-        //private const string API_URL = "https://api-jobs.retornar.com.br/v1/Log/logs/agrupados";
+        private static string API_URL => $"https://api-jobs.retornar.com.br/v1/Log/logs/agrupados?dataInicio={DataInicio:yyyy-MM-ddTHH:mm:ss}&dataFim={DataFim:yyyy-MM-ddTHH:mm:ss}&incluirDescricoes=true";
+        //private const string API_URL = "https://backend-api-develop.retornar.com.br/v1/Log/logs/agrupados?dataInicio={DataInicio:yyyy-MM-ddTHH:mm:ss}&dataFim={DataFim:yyyy-MM-ddTHH:mm:ss}&incluirDescricoes=true";
         private const string TEMPLATE_PATH = "templates/RelatorioLogs.html";
         private const string SAIDA_PATH = "relatorios/RelatorioLogs_atualizado.html";
 
@@ -36,10 +36,21 @@ namespace RelatoriosLogs
             var bearerToken = Environment.GetEnvironmentVariable("RETORNAR_API_TOKEN");
             if (string.IsNullOrEmpty(bearerToken))
             {
-                throw new Exception("❌ Token não encontrado no arquivo .env. Verifique se a variável RETORNAR_API_TOKEN está definida.");
+                Console.WriteLine("❌ Token não encontrado no arquivo .env");
+                Console.WriteLine("📝 Crie um arquivo .env na raiz do projeto com:");
+                Console.WriteLine("   RETORNAR_API_TOKEN=seu_token_aqui");
+                Console.WriteLine("🔑 Obtenha o token válido no sistema Retornar");
+                throw new Exception("Token não configurado. Verifique o arquivo .env");
             }
             
-            Console.WriteLine($"🔑 Token carregado: {bearerToken.Substring(0, 20)}...");
+            // Verifica se o token parece válido (formato JWT)
+            if (!bearerToken.Contains(".") || bearerToken.Split('.').Length != 3)
+            {
+                Console.WriteLine("⚠️ Token parece estar em formato inválido");
+                Console.WriteLine("🔑 O token deve estar no formato JWT válido");
+            }
+            
+            Console.WriteLine($"🔑 Token carregado: {bearerToken.Substring(0, Math.Min(20, bearerToken.Length))}...");
             httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", bearerToken);
         }
 

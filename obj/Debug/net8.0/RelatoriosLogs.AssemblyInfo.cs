@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RelatoriosLogs")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fc34b39ced6ec067f76e4073a289cbd2097f7d3d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e11fbde33421b58988b053ef52ddf178270fed20")]
 [assembly: System.Reflection.AssemblyProductAttribute("RelatoriosLogs")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RelatoriosLogs")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
