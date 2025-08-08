@@ -16,9 +16,9 @@ namespace RelatoriosLogs
     public class Program
     {
         // ========== Configurações ==========
-        // Data específica para buscar os logs (07/08/2025)
-        private static readonly DateTime DataInicio = new DateTime(2025, 8, 7, 0, 0, 0);
-        private static readonly DateTime DataFim = new DateTime(2025, 8, 7, 23, 59, 59);
+        // Data dinâmica - hoje desde 00:00 até o horário atual
+        private static DateTime DataInicio => DateTime.Today; // 00:00:00 de hoje
+        private static DateTime DataFim => DateTime.Now; // Horário atual
         
         private static string API_URL => $"https://api-jobs.retornar.com.br/v1/Log/logs/agrupados?dataInicio={DataInicio:yyyy-MM-ddTHH:mm:ss}&dataFim={DataFim:yyyy-MM-ddTHH:mm:ss}&incluirDescricoes=true";
         //private const string API_URL = "https://backend-api-develop.retornar.com.br/v1/Log/logs/agrupados?dataInicio={DataInicio:yyyy-MM-ddTHH:mm:ss}&dataFim={DataFim:yyyy-MM-ddTHH:mm:ss}&incluirDescricoes=true";
@@ -98,7 +98,7 @@ namespace RelatoriosLogs
 
         private static async Task<List<ApiResponse>> ObterDadosApi()
         {
-            Console.WriteLine($"🌐 Consultando API para logs de {DataInicio:dd/MM/yyyy}...");
+            Console.WriteLine($"🌐 Consultando API para logs de {DataInicio:dd/MM/yyyy} das {DataInicio:HH:mm} até {DataFim:HH:mm}...");
             
             var response = await httpClient.GetAsync(API_URL);
             Console.WriteLine($"🔁 Status: {response.StatusCode}");
